@@ -1,0 +1,33 @@
+.footer {
+  color: #fff;
+  margin-top: -183px;
+
+  &__border {
+    color: $dark;
+    background-color: $tr;
+    transform: scaleX(-1);
+  }
+
+  &__in {
+    padding: 89px 0;
+    background-color: $dark;
+  }
+
+  &__logo {
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    &-title {
+      font-family: $fdem;
+      font-size: 23px;
+      text-transform: uppercase;
+    }
+
+    &-subtitle {
+      font-size: 16px;
+      color: #fff !important;
+    }
+  }
+}

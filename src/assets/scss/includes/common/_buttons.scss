@@ -1,0 +1,22 @@
+.button {
+  position: relative;
+  font-size: $p2;
+  font-family: $fmed;
+  text-align: center;
+  display: inline-block;
+  padding: 12px 20px;
+  color: #fff;
+  background-color: $green;
+  border-radius: 5px;
+  @include ease;
+  box-shadow: 0 2px 0 #48A657;
+
+  &:hover {
+    color: #fff;
+    box-shadow: 0 2px 0 #48A657, 0 10px 10px rgba(62, 142, 75, 0.2);
+  }
+
+  svg {
+    stroke: #fff;
+  }
+}

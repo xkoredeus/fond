@@ -1,0 +1,40 @@
+$fdem: 'FuturaDemi';
+$fmed: 'FuturaMedium';
+$flig: 'FuturaLight';
+$fbook: 'FuturaBook';
+
+.fdem {
+  font-family: $fdem;
+}
+.fmed {
+  font-family: $fmed
+}
+.flig {
+  font-family: $flig;
+}
+.fbook {
+  font-family: $fbook;
+}
+
+$h1: 50px;
+$h2: 40px;
+$h3: 30px;
+$h4: 25px;
+$p1: 16px;
+$p2: 20px;
+
+.h1 {
+  font-size: $h1;
+}
+.h3 {
+  font-size: $h3;
+}
+.h4 {
+  font-size: $h4;
+}
+.p1 {
+  font-size: $p1;
+}
+.p2 {
+  font-size: $p2;
+}

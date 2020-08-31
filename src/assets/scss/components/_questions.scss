@@ -1,0 +1,57 @@
+.questions {
+  &__border {
+    color: $gray;
+  }
+
+  &__in {
+    background-color: $gray;
+    padding-bottom: calc(60px + 180px);
+  }
+}
+
+.question {
+  &:not(:last-child) {
+    margin-bottom: 15px;
+  }
+
+  &__top {
+    padding: 11px 30px;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    @include ease;
+  }
+
+  &__arrow {
+    stroke: $dark;
+    @include ease;
+  }
+
+  &__descr {
+    font-size: $p1;
+    padding: 17px 30px;
+    background-color: #fff;
+    border: 1px solid $dgray;
+    margin-top: 5px;
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &.active {
+    .question {
+      &__top {
+        color: #fff;
+        background-color: $green;
+      }
+
+      &__arrow {
+        stroke: #fff;
+        transform: scaleY(-1);
+      }
+    }
+  }
+}

@@ -1,0 +1,29 @@
+.section {
+  &--inner {
+    padding: 60px 0;
+    @include r(1200) {
+      padding: 35px 0
+    }
+  }
+
+  &__title {
+    font-size: $h1;
+    font-family: $fdem;
+    margin-bottom: 40px;
+    text-align: center;
+    @include r(1200) {
+      font-size: 25px;
+      margin-bottom: 15px;
+    }
+  }
+
+
+
+  &__subtitle {
+    max-width: 570px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 60px;
+    text-align: center;
+  }
+}
