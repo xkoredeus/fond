@@ -2,15 +2,36 @@
   color: #fff;
   margin-top: -183px;
 
+  @include r(1200) {
+    margin-top: -130px;
+  }
+
   &__border {
     color: $dark;
     background-color: $tr;
     transform: scaleX(-1);
+
+    @include r(800) {
+      position: relative;
+      width: 848px;
+      height: 130px;
+      left: 50%;
+      transform: scaleX(-1) translateX(50%);
+    }
+
+    @include r(600) {
+      width: 688px;
+      height: 90px;
+    }
   }
 
   &__in {
     padding: 89px 0;
     background-color: $dark;
+
+    @include r(1200) {
+      padding: 40px 0;
+    }
   }
 
   &__logo {

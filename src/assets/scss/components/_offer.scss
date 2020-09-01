@@ -22,7 +22,7 @@
     }
   }
 
-  @include r(852) {
+  @include r(900) {
     background-size: 900px;
     background-position: 50% 20%;
   }
@@ -49,6 +49,10 @@
       @include r(1200) {
         font-size: 45px;
       }
+
+      @include r(400) {
+        font-size: 30px;
+      }
     }
   }
 
@@ -61,6 +65,8 @@
     @include r(1200) {
       font-family: $fmed;
       font-size: $p1;
+      margin: 25px auto 10px;
+      min-height: 100px;
     }
   }
 }

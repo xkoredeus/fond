@@ -1,21 +1,47 @@
 .quiz {
   .button {
     min-width: 180px;
+
+    @include r(500) {
+      width: 100%;
+    }
   }
 
   &__item {
     padding: 40px 0;
+
+    @include r(600) {
+      padding: 25px 0;
+    }
   }
 
   &__steps {
     display: flex;
     justify-content: space-between;
+
+    @include r(600) {
+      flex-direction: column;
+      justify-content: flex-start;
+    }
   }
 
   &__step {
     position: relative;
     color: $dgray;
     flex-basis: 170px;
+
+    @include r(1200) {
+      flex-basis: 140px;
+    }
+
+    @include r(600) {
+      flex-basis: 100%;
+      display: flex;
+
+      &:not(:last-child) {
+        margin-bottom: 15px;
+      }
+    }
 
     &.active {
       color: $green;
@@ -33,11 +59,19 @@
     }
 
     &-num {
+      position: absolute;
       font-family: $fdem;
       font-size: 50px;
-      position: absolute;
       top: -10px;
       left: 5px;
+
+      @include r(600) {
+        position: relative;
+        font-size: 25px;
+        left: 0;
+        top: 0;
+        margin-right: 5px;
+      }
     }
 
     &-circle {
@@ -48,6 +82,15 @@
       @include ease;
       @include flex-center;
       margin-bottom: 18px;
+
+      @include r(1200) {
+        width: 140px;
+        height: 140px;
+      }
+      
+      @include r(600) {
+        display: none;
+      }
     }
 
     &-icon {
@@ -58,6 +101,14 @@
       font-family: $fdem;
       font-size: 25px;
       text-align: center;
+
+      @include r(1200) {
+        font-size: 18px;
+      }
+
+      @include r(600) {
+        font-size: 25px;
+      }
     }
   }
 
@@ -80,6 +131,11 @@
       margin-right: 25px;
       border-radius: 50%;
       @include flex-center;
+
+      @include r(1200) {
+        margin-right: 0;
+        margin-bottom: 15px;
+      }
     }
   }
   
@@ -87,8 +143,18 @@
     cursor: pointer;
     margin-bottom: 0;
 
+    @include r(500) {
+      width: 100%;
+    }
+
     &:not(:last-child) {
-      margin-right: 30px;
+      @include rmin(1200) {
+        margin-right: 30px;
+      }
+
+      @include r(1200) {
+        margin-bottom: 15px;
+      }
     }
 
     input {
@@ -152,5 +218,21 @@
 
   &__input {
     max-width: 200px;
+
+    @include r(500) {
+      max-width: unset;
+      flex-grow: 1;
+
+    }
+
+    &-wrp {
+      @include r(500) {
+        width: 100%;
+
+        span {
+          min-width: 18px;
+        }
+      }
+    }
   }
 }

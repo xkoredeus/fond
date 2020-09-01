@@ -69,5 +69,18 @@
   &__border {
     color: $gray;
     transform: scale(-1, -1);
+
+    @include r(800) {
+      position: relative;
+      width: 848px;
+      height: 130px;
+      left: 50%;
+      transform: scale(-1, -1) translateX(50%);
+    }
+
+    @include r(600) {
+      width: 688px;
+      height: 90px;
+    }
   }
 }

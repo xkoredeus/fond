@@ -1,11 +1,28 @@
 .questions {
   &__border {
     color: $gray;
+
+    @include r(800) {
+      position: relative;
+      width: 848px;
+      height: 130px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    @include r(600) {
+      width: 688px;
+      height: 90px;
+    }
   }
 
   &__in {
     background-color: $gray;
     padding-bottom: calc(60px + 180px);
+
+    @include r(1200) {
+      padding-bottom: calc(30px + 130px);
+    }
   }
 }
 
@@ -15,6 +32,7 @@
   }
 
   &__top {
+    font-size: $p2;
     padding: 11px 30px;
     background-color: #fff;
     display: flex;
@@ -22,11 +40,17 @@
     align-items: center;
     cursor: pointer;
     @include ease;
+
+    @include r(1200) {
+      padding: 11px 20px;
+    }
   }
 
   &__arrow {
     stroke: $dark;
     @include ease;
+
+    margin-left: 10px;
   }
 
   &__descr {
@@ -35,6 +59,10 @@
     background-color: #fff;
     border: 1px solid $dgray;
     margin-top: 5px;
+
+    @include r(1200) {
+      padding: 15px 20px;
+    }
 
     p:last-child {
       margin-bottom: 0;
