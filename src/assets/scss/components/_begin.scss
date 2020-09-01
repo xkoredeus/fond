@@ -40,10 +40,11 @@
       width: 67px;
       height: 67px;
       border-radius: 50%;
-      background-color: #D9D9D9;
+      background-color: $green;
+      box-shadow: 0 10px 10px rgba(62, 142, 75, 0.2), 0 2px 0 #48A657;
       
       &:hover {
-        background-color: $green;
+        box-shadow: 0 -2px 0 #48A657;
       }
 
       svg {
