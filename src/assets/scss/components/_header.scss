@@ -1,7 +1,7 @@
 .header {
   position: relative;
   padding: 40px 0;
-  z-index: 1;
+  z-index: 5;
 
   @include r(1200) {
     padding: 25px 0;
@@ -118,10 +118,11 @@
     &-wrp {
       @include r(1200) {
         position: absolute;
-        padding: 25px 0;
+        width: 100%;
         top: 50px;
         left: 50%;
         opacity: 0;
+        padding: 25px 0;
         visibility: hidden;
         transform: translateX(-10px);
         @include ease;

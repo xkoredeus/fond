@@ -5382,11 +5382,8 @@ input[type="number"] {
 }
 
 .inner-content .crumbs span a {
+  color: #262626;
   border-bottom-color: #262626;
-}
-
-.owl-carousel .owl-item img {
-  width: auto !important;
 }
 
 .owl-carousel .owl-dots {
@@ -5558,7 +5555,7 @@ button {
 .header {
   position: relative;
   padding: 40px 0;
-  z-index: 1;
+  z-index: 5;
 }
 
 @media only screen and (max-width: 1200px) {
@@ -5708,10 +5705,11 @@ button {
 @media only screen and (max-width: 1200px) {
   .header__cabinet-wrp {
     position: absolute;
-    padding: 25px 0;
+    width: 100%;
     top: 50px;
     left: 50%;
     opacity: 0;
+    padding: 25px 0;
     visibility: hidden;
     -webkit-transform: translateX(-10px);
             transform: translateX(-10px);
@@ -5925,6 +5923,7 @@ body.show-menu .header__cabinet-icon {
   min-height: 700px;
   background-position: 50% calc(100% + 40px);
   background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .offer::before {
@@ -6029,6 +6028,10 @@ body.show-menu .header__cabinet-icon {
   content: "₽";
   font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto;
   font-weight: 700;
+}
+
+.rub--light::after {
+  font-weight: 400;
 }
 
 .begin {
@@ -6519,6 +6522,21 @@ body.show-menu .header__cabinet-icon {
 .crumbs span {
   color: #fff;
   font-size: 16px;
+  display: inline-block;
+}
+
+@media only screen and (max-width: 1200px) {
+  .crumbs span {
+    margin-bottom: 8px;
+  }
+}
+
+.crumbs span a {
+  color: #fff;
+}
+
+.crumbs span a:hover {
+  color: #5DD470;
 }
 
 .crumbs span:not(:last-child) {
@@ -6916,6 +6934,184 @@ body.show-menu .header__cabinet-icon {
 .stories__video-decor--2 {
   top: -60px;
   right: -100px;
+}
+
+.banner {
+  position: relative;
+  color: #fff;
+  background-color: #262626;
+}
+
+.banner__slider {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.banner__slider .owl-stage-outer,
+.banner__slider .owl-stage,
+.banner__slider .owl-item {
+  height: 100%;
+}
+
+.banner__slider-item {
+  position: relative;
+  height: 100%;
+}
+
+.banner__slider-item::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(64%, #000), to(transparent));
+  background: linear-gradient(180deg, #000 64%, transparent 100%);
+  opacity: .6;
+  z-index: 1;
+}
+
+.banner__slider-img {
+  height: 100%;
+  max-height: unset !important;
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.banner__slider .owl-dots {
+  bottom: 230px;
+}
+
+.banner__in {
+  position: relative;
+}
+
+.banner__in .container {
+  position: relative;
+}
+
+.banner__info {
+  position: relative;
+  z-index: 3;
+  margin-bottom: 100px;
+}
+
+.banner__nav {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: 50%;
+  background-color: #fff;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  z-index: 3;
+}
+
+.banner__nav:hover {
+  background-color: #5DD470;
+}
+
+.banner__nav:hover svg {
+  stroke: #fff;
+}
+
+.banner__nav--prev {
+  left: -25px;
+}
+
+.banner__nav--next {
+  right: -25px;
+}
+
+.banner__nav svg {
+  fill: none;
+  stroke: #262626;
+}
+
+.banner__button {
+  background-color: transparent;
+  border: 1px solid #5DD470;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  margin-bottom: 30px;
+}
+
+.banner__button:hover {
+  color: #fff;
+  background-color: #5DD470;
+}
+
+.banner__test {
+  font-size: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 20px;
+}
+
+@media only screen and (min-width: 600px) {
+  .banner__test:not(:last-child) {
+    margin-right: 25px;
+  }
+}
+
+.banner__test svg {
+  fill: #fff;
+}
+
+.banner__price-icon {
+  fill: #fff;
+  margin-right: 15px;
+  margin-bottom: -10px;
+}
+
+.banner__price-subtitle {
+  margin-left: 5px;
+  margin-bottom: -13px;
+}
+
+.banner__border {
+  position: relative;
+  color: #F2F2F2;
+  background-color: transparent;
+  z-index: 3;
+}
+
+@media only screen and (max-width: 800px) {
+  .banner__border {
+    position: relative;
+    width: 848px;
+    height: 130px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .banner__border {
+    width: 688px;
+    height: 90px;
+  }
 }
 
 .selected__watch-button-wrp {
