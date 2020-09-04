@@ -9,18 +9,27 @@
     width: 100%;
     display: flex;
     justify-content: center;
-    bottom: 0;
+    bottom: 20px;
 
     button.owl-dot {
-      width: 20px;
-      height: 20px;
-      border: 1px solid $dark;
-      border-radius: 50%;
-      background-color: $dark;
       position: relative;
-      @include r(1200) {
-        width: 15px;
-        height: 15px;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      padding: 0;
+      background-color: #fff;
+
+      span {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        left: 50%;
+        top: 50%;
+        background-color: #fff;
+        border-radius: 50%;
+        transform: translate(-50%, -50%) scale(.5);
+        opacity: 0;
+        @include ease;
       }
 
       &:not(:last-child) {
@@ -28,8 +37,10 @@
       }
 
       &.active {
-        border-color: $dark;
-        background-color: $dark;
+        span {
+          transform: translate(-50%, -50%) scale(1);
+          opacity: .4;
+        }
       }
     }
   }
@@ -37,45 +48,23 @@
     button {
       &.owl-prev,
       &.owl-next {
-        width: 54px;
-        height: 54px;
+        width: 30px;
+        height: 30px;
         position: absolute;
         top: 50%;
+        background-color: #fff;
         border-radius: 50%;
         padding: 0;
-        border: 1px solid $dark;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include flex-center;
         transform: translateY(-50%);
         @include ease;
-
-        span {
-          width: 50px;
-          height: 50px;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          background-color: $dark;
-          border-radius: 50%;
-          @include ease;
-        }
-
-        @include r(1200) {
-          width: 30px;
-          height: 30px;
-          span {
-            width: 25px;
-            height: 25px;
-          }
-        }
 
         svg {
           max-width: 17px;
           max-height: 17px;
           height: auto;
           fill: none;
-          stroke: #fff;
+          stroke: $dark;
           @include ease;
           @include r(1200) {
             max-height: 12px
@@ -83,11 +72,7 @@
         }
 
         &:hover {
-          border-color: $dark;
-
-          span {
-            background-color: $dark;
-          }
+          background-color: $green;
 
           svg {
             stroke: #fff;

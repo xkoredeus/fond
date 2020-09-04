@@ -2,29 +2,22 @@
   position: relative;
   color: #fff;
   min-height: 700px;
-  background-image: url('../img/offer__bg.jpg');
   background-position: 50% calc(100% + 40px);
   background-repeat: no-repeat;
 
-  @include r(1200) {
-    background-size: 100%;
-    background-position: 50% 100%;
-    min-height: unset;
-    
-    &::before {
-      @include ovl;
-      background: linear-gradient(180deg, #000 0%, $tr 100%);
-      opacity: .5;
-    }
-
-    & > * {
-      position: relative;
-    }
+  &::before {
+    @include ovl;
+    background: linear-gradient(180deg, #000 64%, $tr 100%);
+    opacity: .6;
   }
 
-  @include r(900) {
-    background-size: 900px;
-    background-position: 50% 20%;
+  & > * {
+    position: relative;
+  }
+
+  @include r(1200) {
+    background-position: 50% 100%;
+    min-height: unset;
   }
 
   &__in {
@@ -67,6 +60,23 @@
       font-size: $p1;
       margin: 25px auto 10px;
       min-height: 100px;
+    }
+  }
+
+  &__border {
+    color: $gray;
+
+    @include r(800) {
+      position: relative;
+      width: 848px;
+      height: 130px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    @include r(600) {
+      width: 688px;
+      height: 90px;
     }
   }
 }

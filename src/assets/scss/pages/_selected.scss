@@ -1,0 +1,25 @@
+.selected {
+  &__watch {
+    &-button-wrp {
+      position: relative;
+
+      svg {
+        position: absolute;
+        right: -130px;
+        top: -60px;
+
+        @include r(1200) {
+          display: none;
+        }
+
+        @include r(600) {
+          display: block;
+          width: 40px;
+          height: 50px;
+          right: -60px;
+          top: -10px;
+        }
+      }
+    }
+  }
+}

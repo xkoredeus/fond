@@ -9,6 +9,11 @@ select {
   border: 1px solid $dgray;
   @include ease;
 }
+select {
+  font-family: $fbook;
+  padding-left: 15px;
+  padding-right: 15px;
+}
 option {
   color: $dark;
 }

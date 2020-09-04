@@ -1,0 +1,145 @@
+.filter {
+  margin-top: 30px;
+
+  &__list {
+    font-size: $h5;
+    border-top: 1px solid $dgray;
+    border-bottom: 1px solid $dgray;
+    padding: 30px 0;
+  }
+
+  &__advanced {
+    color: $green;
+
+    svg {
+      fill: $green;
+    }
+  }
+
+  &__view {
+    &-button {
+      fill: $dgray;
+
+      &:not(:last-child) {
+        margin-right: 5px;
+      }
+
+      &--active {
+        fill: $dark;
+      }
+    }
+  }
+
+  select {
+    font-size: $h5;
+  }
+
+  &__dropdown {
+    position: relative;
+    padding: 24px 0;
+    border-bottom: 1px solid $dgray;
+
+    &::before {
+      position: absolute;
+      content: '';
+      width: 22px;
+      height: 22px;
+      left: 130px;
+      top: -12px;
+      background-color: $gray;
+      border-top: 1px solid $dgray;
+      border-right: 1px solid $dgray;
+      transform: rotate(-45deg);
+
+      @include r(1200) {
+        top: -20px;
+        left: 50%;
+        transform: rotate(-45deg) translateX(-50%);
+      }
+    }
+  }
+  
+  &__checkbox {
+    cursor: pointer;
+    max-width: 91px;
+
+    @include rmin(1200) {
+      margin-bottom: 0;
+    }
+
+    @include r(1200) {
+      margin: 10px 10px;
+    }
+
+    @include r(600) {
+      flex-basis: 33%;
+    }
+
+    @include r(370) {
+      margin: 10px 3px;
+    }
+
+    &-in {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    input {
+      position: absolute;
+      visibility: hidden;
+
+      &:checked + .filter__checkbox-in {
+        .filter__checkbox  {
+          &-circle {
+            &::before {
+              opacity: .8;
+              visibility: visible;
+            }
+          }
+
+          &-gal {
+            opacity: 1;
+            visibility: visible;
+            transform: translate(-50%, -50%) scale(1);
+          }
+        }
+      }
+    }
+
+    &-circle {
+      position: relative;
+      width: 76px;
+      height: 76px;
+      background-color: #fff;
+      border-radius: 50%;
+      margin-bottom: 10px;
+      overflow: hidden;
+      @include flex-center;
+
+      &::before {
+        @include ovl;
+        background-color: $green;
+        opacity: 0;
+        @include ease;
+      }
+    }
+
+    &-gal {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%) scale(.5);
+      opacity: 0;
+      visibility: hidden;
+      z-index: 1;
+      @include ease;
+    }
+
+    @include r(370) {
+      .p1 {
+        font-size: 14px;
+      }
+    }
+  }
+}

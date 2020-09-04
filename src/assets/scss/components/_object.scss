@@ -1,0 +1,119 @@
+.object {
+  background-color: #fff;
+  border-radius: 5px;
+  @include ease;
+
+  &:hover {
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.05);
+  }
+
+  &__top {
+    position: relative;
+    width: 100%;
+    min-height: 250px;
+    @include cv;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+
+  &__slider {
+    &-item {
+      min-height: 250px;
+      @include cv;
+    }
+
+    .owl-nav {
+      button {
+        &.owl-prev {
+          left: 10px;
+        }
+        &.owl-next {
+          right: 10px;
+        }
+      }
+    }
+  }
+
+  &__label {
+    position: absolute;
+    font-family: $fdem;
+    font-size: 14px;
+    text-align: center;
+    color: #fff;
+    top: 20px;
+    right: 20px;
+    background-color: $green;
+    padding: 5px 10px;
+    border-radius: 10px;
+    z-index: 2;
+
+    &--inactive {
+      color: $dark;
+      background-color: $gray;
+    }
+  }
+
+  &__bot {
+    font-size: $h5;
+    padding: 22px 19px;
+  }
+
+  &__title {
+    font-family: $fdem;
+    margin-bottom: 10px;
+  }
+
+  &__info {
+    padding-bottom: 12px;
+    margin-bottom: 12px;
+    border-bottom: 1px solid $dgray;
+
+    &-item {
+      display: flex;
+      align-items: center;
+
+      &:not(:last-child) {
+        margin-bottom: 7px;
+      }
+    }
+
+    &-icon {
+      text-align: center;
+      min-width: 20px;
+      margin-right: 5px;
+      margin-top: -3px;
+    }
+  }
+
+  &__option {
+    min-width: 36px;
+    height: 36px;
+    border: 1px solid $dark;
+    border-radius: 50%;
+    @include flex-center;
+    margin-bottom: 6px;
+
+    &:not(:last-child) {
+      margin-right: 11px;
+    }
+
+    svg {
+      fill: $dark;
+    }
+  }
+
+  &__price {
+    margin-top: 5px;
+
+    &-value {
+      font-size: 27px;
+      font-family: $fdem;
+      margin-bottom: -3px;
+    }
+  }
+
+  &__button {
+    width: 100%;
+    margin-top: 20px;
+  }
+}

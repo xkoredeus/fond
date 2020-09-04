@@ -20,6 +20,7 @@ $h1: 50px;
 $h2: 40px;
 $h3: 30px;
 $h4: 25px;
+$h5: 18px;
 $p1: 16px;
 $p2: 20px;
 
@@ -34,6 +35,9 @@ $p2: 20px;
 }
 .h4 {
   font-size: $h4;
+}
+.h5 {
+  font-size: $h5;
 }
 .p1 {
   font-size: $p1;

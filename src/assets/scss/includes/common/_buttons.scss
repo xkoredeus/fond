@@ -4,7 +4,7 @@
   font-family: $fmed;
   text-align: center;
   display: inline-block;
-  padding: 12px 20px;
+  padding: 12px 25px;
   color: #fff;
   background-color: $green;
   border-radius: 5px;
@@ -13,6 +13,7 @@
 
   @include r(1200) {
     box-shadow: 0 10px 10px rgba(62, 142, 75, 0.2), 0 2px 0 #48A657 !important;
+    padding: 12px 20px;
   }
 
   &:hover {
@@ -22,5 +23,9 @@
 
   svg {
     stroke: #fff;
+  }
+
+  &--big {
+    min-width: 272px;
   }
 }

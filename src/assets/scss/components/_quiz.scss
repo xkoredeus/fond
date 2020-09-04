@@ -15,99 +15,67 @@
     }
   }
 
-  &__steps {
+  &__stage {
+    position: relative;
+    width: 100%;
+    height: 6px;
+    background-color: $gray;
+    border-radius: 5px;
     display: flex;
     justify-content: space-between;
-
-    @include r(600) {
-      flex-direction: column;
-      justify-content: flex-start;
-    }
-  }
-
-  &__step {
-    position: relative;
-    color: $dgray;
-    flex-basis: 170px;
+    align-items: center;
 
     @include r(1200) {
-      flex-basis: 140px;
+      height: 4px;
     }
 
-    @include r(600) {
-      flex-basis: 100%;
-      display: flex;
+    &-line {
+      flex-grow: 1;
+      height: 6px;
 
-      &:not(:last-child) {
-        margin-bottom: 15px;
+      @include r(1200) {
+        height: 4px;
       }
-    }
 
-    &.active {
-      color: $green;
+      &:first-child {
+        max-width: 15px;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
 
-      .quiz__step {
-
-        &-circle {
-          background-color: $green;
-        }
-
-        &-icon {
-          fill: #fff;
+        @include r(600) {
+          max-width: 6px;
         }
       }
-    }
 
-    &-num {
-      position: absolute;
-      font-family: $fdem;
-      font-size: 50px;
-      top: -10px;
-      left: 5px;
+      &:last-child {
+        max-width: 15px;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
 
-      @include r(600) {
-        position: relative;
-        font-size: 25px;
-        left: 0;
-        top: 0;
-        margin-right: 5px;
+        @include r(600) {
+          max-width: 6px;
+        }
+      }
+
+      &--active {
+        background-color: $green;
       }
     }
 
     &-circle {
-      width: 170px;
-      height: 170px;
-      border: 1px solid $dgray;
+      position: relative;
+      width: 30px;
+      height: 30px;
+      background-color: $gray;
       border-radius: 50%;
-      @include ease;
-      @include flex-center;
-      margin-bottom: 18px;
 
       @include r(1200) {
-        width: 140px;
-        height: 140px;
-      }
-      
-      @include r(600) {
-        display: none;
-      }
-    }
-
-    &-icon {
-      fill: $dgray;
-    }
-
-    &-title {
-      font-family: $fdem;
-      font-size: 25px;
-      text-align: center;
-
-      @include r(1200) {
-        font-size: 18px;
+        width: 15px;
+        height: 15px;
       }
 
-      @include r(600) {
-        font-size: 25px;
+      &--active {
+        background-color: $green;
       }
     }
   }
@@ -232,6 +200,36 @@
         span {
           min-width: 18px;
         }
+      }
+    }
+  }
+
+  &__border {
+    color: $gray;
+
+    @include r(800) {
+      position: relative;
+      width: 848px;
+      height: 130px;
+      left: 50%;
+    }
+
+    @include r(600) {
+      width: 688px;
+      height: 90px;
+    }
+
+    &--top {
+      transform: scale(-1, -1);
+
+      @include r(800) {
+        transform: scale(-1, -1) translateX(50%);
+      }
+    }
+
+    &--bot {
+      @include r(800) {
+        transform: translateX(-50%);
       }
     }
   }

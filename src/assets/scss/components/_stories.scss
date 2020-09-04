@@ -1,4 +1,4 @@
-.begin {
+.stories {
   position: relative;
 
   &__decor {
@@ -7,12 +7,12 @@
 
     &--1 {
       left: -250px;
-      bottom: -200px;
+      bottom: -110px;
     }
 
     &--2 {
       right: -150px;
-      bottom: -180px;
+      bottom: -20px;
     }
   }
 
@@ -23,10 +23,6 @@
     background-color: #fff;
     @include cv;
     @include flex-center;
-
-    @include rmin(1200) {
-      transform: translateY(-50px);
-    }
 
     @include r(600) {
       min-height: 163px;

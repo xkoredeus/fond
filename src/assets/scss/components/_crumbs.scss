@@ -1,0 +1,21 @@
+.crumbs {
+  margin: 0 auto 30px;
+  text-align: center;
+  span {
+    color: #fff;
+    font-size: 16px;
+
+    &:not(:last-child) {
+      position: relative;
+
+      &::after {
+        content: '-';
+        margin: 0 5px;
+      }
+    }
+
+    a {
+      border-bottom: 1px solid #fff;
+    }
+  }
+}
