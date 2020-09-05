@@ -28,4 +28,14 @@
   &--big {
     min-width: 272px;
   }
+
+  &--tr {
+    background-color: $tr;
+    border: 1px solid $green;
+    box-shadow: none;
+    &:hover {
+      color: #fff;
+      background-color: $green;
+    }
+  }
 }

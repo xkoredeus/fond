@@ -110,10 +110,32 @@
       font-family: $fdem;
       margin-bottom: -3px;
     }
+    
+    &-old {
+      color: #9B9B9B;
+      text-decoration: line-through;
+    }
   }
 
   &__button {
     width: 100%;
     margin-top: 20px;
+  }
+
+  &__list {
+    @include r(1200) {
+      padding-bottom: 30px;
+    }
+    & > .owl-dots {
+      bottom: -10px;
+
+      button.owl-dot {
+        background-color: $dark;
+
+        span {
+          background-color: $dark;
+        }
+      }
+    }
   }
 }

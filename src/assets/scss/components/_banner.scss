@@ -100,14 +100,11 @@
     svg {
       fill: none;
       stroke: $dark;
-
+      @include ease;
     }
   }
 
   &__button {
-    background-color: $tr;
-    border: 1px solid $green;
-    box-shadow: none;
     margin-bottom: 30px;
 
     @include r(1200) {
@@ -115,11 +112,6 @@
       height: 50px;
       padding: 0;
       @include flex-center;
-    }
-
-    &:hover {
-      color: #fff;
-      background-color: $green;
     }
   }
 

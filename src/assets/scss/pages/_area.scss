@@ -1,5 +1,11 @@
 .area {
   &-info {
+    padding-bottom: 60px;
+
+    @include r(1200) {
+      padding-bottom: 30px;
+    }
+
     &__item {
       display: flex;
       flex-direction: column;
@@ -61,9 +67,10 @@
         .area-stat__circle {
           background-color: $green;
 
-          svg {
-            fill: #fff;
-          }
+        }
+
+        .area-stat__icon {
+          fill: #fff;
         }
       }
 
@@ -87,25 +94,125 @@
       background-color: #fff;
       border-radius: 50%;
       margin-bottom: 10px;
-      overflow: hidden;
       @include flex-center;
     }
 
-    //&__gal {
-    //  position: absolute;
-    //  left: 50%;
-    //  top: 50%;
-    //  transform: translate(-50%, -50%) scale(.5);
-    //  opacity: 0;
-    //  visibility: hidden;
-    //  z-index: 1;
-    //  @include ease;
-    //}
+    &__percentage {
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+
+      path {
+        stroke: $green;
+        fill: none;
+        stroke-width: 1;
+        stroke-linecap: round;
+      }
+    }
 
     @include r(370) {
       .p1 {
         font-size: 14px;
       }
     }
+  }
+
+  &-reserv {
+    @include r(1200) {
+      text-align: center;
+    }
+
+    .button {
+      margin-top: 15px;
+
+      @include r(400) {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.animatable {
+  animation-play-state: paused;
+}
+
+.animated {
+  animation-fill-mode: both;
+  animation-play-state: running;
+  animation: progress 2s ease-out forwards;
+}
+
+@keyframes progress {
+  0% {
+    stroke-dasharray: 0 100;
+  }
+}
+
+.plan {
+  position: relative;
+  min-height: 800px;
+  overflow: hidden;
+
+  @include r(1200) {
+    min-height: 400px;
+  }
+
+  iframe {
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    @include r(1200) {
+      height: 400px;
+    }
+  }
+
+  &__border {
+    color: $gray;
+    z-index: 1;
+
+    @include r(800) {
+      position: relative;
+      width: 848px;
+      height: 130px;
+      left: 50%;
+    }
+
+    @include r(600) {
+      width: 688px;
+      height: 90px;
+    }
+
+    &--top {
+      position: relative;
+      transform: scale(-1, -1);
+
+      @include r(800) {
+        transform: scale(-1, -1) translateX(50%);
+      }
+    }
+
+    &--bot {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      @include r(800) {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+  }
+
+  &__top {
+    position: relative;
+    background-color: $gray;
+    z-index: 1;
+  }
+
+  .section__title {
+    margin-bottom: 0;
   }
 }

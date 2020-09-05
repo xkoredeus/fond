@@ -82,14 +82,14 @@
       }
 
       &.owl-prev {
-        left: calc(-57px / 2);
+        left: -50px;
         @include r(1200) {
           left: 5px;
         }
       }
 
       &.owl-next {
-        right: calc(-57px / 2);
+        right: -50px;
         @include r(1200) {
           right: 5px;
         }
