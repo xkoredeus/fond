@@ -58,11 +58,18 @@ $(() => {
     $('.banner__slider').owlCarousel({
         nav: false,
         items: 1,
-        loop: false,
+        loop: true,
         dots: true,
         smartSpeed: 800,
         lazyLoad: true,
-        video: true,
+        animateIn: 'fadeIn',
+        animateOut: 'fadeOut',
         navText: ["<svg width='8' height='11' viewBox='0 0 8 11' xmlns='http://www.w3.org/2000/svg'><path d='M6.5 1L2 5.5L6.5 10' stroke-width='2'/></svg>", "<svg width='7' height='11' viewBox='0 0 7 11' xmlns='http://www.w3.org/2000/svg'><path d='M1 1L5.5 5.5L1 10' stroke-width='2'/></svg>"],
+    });
+    $('.js-banner__nav--prev').on('click', function bannerSliderPrev () {
+        $('.banner__slider').trigger('prev.owl.carousel');
+    });
+    $('.js-banner__nav--next').on('click', function bannerSliderNext () {
+        $('.banner__slider').trigger('next.owl.carousel');
     });
 });
