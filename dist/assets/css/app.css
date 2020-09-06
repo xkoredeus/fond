@@ -10466,9 +10466,7 @@ body.show-menu .header__cabinet-icon {
   stroke: #262626;
   -webkit-transition: .3s all ease;
   transition: .3s all ease;
-  min-width: -webkit-fit-content;
-  min-width: -moz-fit-content;
-  min-width: fit-content;
+  min-width: 12px;
   margin-left: 10px;
 }
 
