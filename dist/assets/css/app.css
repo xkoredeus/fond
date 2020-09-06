@@ -11076,7 +11076,7 @@ body.show-menu .header__cabinet-icon {
 
 @media only screen and (max-width: 1200px) {
   .banner__nav {
-    display: none;
+    z-index: 4;
   }
 }
 
@@ -11092,8 +11092,20 @@ body.show-menu .header__cabinet-icon {
   left: -25px;
 }
 
+@media only screen and (max-width: 1200px) {
+  .banner__nav--prev {
+    left: 5px;
+  }
+}
+
 .banner__nav--next {
   right: -25px;
+}
+
+@media only screen and (max-width: 1200px) {
+  .banner__nav--next {
+    right: 5px;
+  }
 }
 
 .banner__nav svg {
