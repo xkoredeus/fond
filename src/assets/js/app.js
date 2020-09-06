@@ -142,3 +142,20 @@ $(() => {
 
     });
 });
+
+$(() => {
+    let timer2 = "08:00";
+    const interval = setInterval(function() {
+        const timer = timer2.split(':');
+        let minutes = parseInt(timer[0], 10);
+        let seconds = parseInt(timer[1], 10);
+        --seconds;
+        minutes = (seconds < 0) ? --minutes : minutes;
+        minutes = (minutes < 10) ? '0' + minutes : minutes;
+        if (minutes < 0) clearInterval(interval);
+        seconds = (seconds < 0) ? 59 : seconds;
+        seconds = (seconds < 10) ? '0' + seconds : seconds;
+        $(".timer__in").html("<div class='timer__item tac'>"+minutes+"</div><div class='timer__item-delim'>:</div><div class='timer__item tac'>"+seconds+"</div>");
+        timer2 = minutes + ':' + seconds;
+    }, 1000);
+});

@@ -1,5 +1,11 @@
 .text-center {
   text-align: center;
+  
+  &--mobile {
+    @include r(1200) {
+      text-align: center;
+    }
+  }
 }
 .text-left {
   text-align: left !important;
@@ -15,4 +21,7 @@
 }
 .ttn {
   text-transform: none !important;
+}
+.nowrap {
+  white-space: nowrap;
 }

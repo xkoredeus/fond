@@ -1,9 +1,74 @@
 .area {
   &-info {
+    position: relative;
     padding-bottom: 60px;
+
+    .container {
+      position: relative;
+      z-index: 1;
+    }
 
     @include r(1200) {
       padding-bottom: 30px;
+    }
+
+    &__decor {
+      position: absolute;
+      z-index: 1;
+
+      &--1 {
+        left: -250px;
+        bottom: -110px;
+      }
+
+      &--2 {
+        right: -150px;
+        bottom: -20px;
+      }
+    }
+
+    &__video {
+      position: relative;
+      min-height: 322px;
+      border-radius: 5px;
+      background-color: #fff;
+      @include cv;
+      @include flex-center;
+
+      @include r(600) {
+        min-height: 163px;
+      }
+
+      &-button {
+        width: 67px;
+        height: 67px;
+        border-radius: 50%;
+        background-color: $green;
+        box-shadow: 0 10px 10px rgba(62, 142, 75, 0.2), 0 2px 0 #48A657;
+
+        &:hover {
+          box-shadow: 0 -2px 0 #48A657;
+        }
+
+        svg {
+          fill: #fff;
+        }
+      }
+
+      &-decor {
+        position: absolute;
+        z-index: 3;
+
+        &--1 {
+          bottom: -100px;
+          left: -120px;
+        }
+
+        &--2 {
+          top: -60px;
+          right: -100px;
+        }
+      }
     }
 
     &__item {
@@ -132,6 +197,13 @@
         width: 100%;
       }
     }
+
+    &__decor {
+      font-family: $fdem;
+      color: #fff;
+      padding: 3px 6px;
+      background-color: $green;
+    }
   }
 }
 
@@ -196,6 +268,146 @@
     }
 
     &--bot {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      @include r(800) {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+  }
+
+  &__top {
+    position: relative;
+    background-color: $gray;
+    z-index: 1;
+  }
+
+  .section__title {
+    margin-bottom: 0;
+  }
+}
+
+.tour {
+  .plan {
+    position: relative;
+    min-height: 800px;
+    overflow: hidden;
+
+    @include r(1200) {
+      min-height: 400px;
+    }
+
+    iframe {
+      position: absolute;
+      left: 0;
+      top: 0;
+
+      @include r(1200) {
+        height: 400px;
+      }
+    }
+
+    &__border {
+      color: $gray;
+      z-index: 1;
+
+      @include r(800) {
+        position: relative;
+        width: 848px;
+        height: 130px;
+        left: 50%;
+      }
+
+      @include r(600) {
+        width: 688px;
+        height: 90px;
+      }
+
+      &--top {
+        position: relative;
+        transform: scale(-1, -1);
+
+        @include r(800) {
+          transform: scale(-1, -1) translateX(50%);
+        }
+      }
+
+      &--bot {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        @include r(800) {
+          left: 50%;
+          transform: translateX(-50%);
+        }
+      }
+    }
+
+    &__top {
+      position: relative;
+      background-color: $gray;
+      z-index: 1;
+    }
+
+    .section__title {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.tour {
+  position: relative;
+  min-height: 800px;
+  overflow: hidden;
+
+  @include r(1200) {
+    min-height: 400px;
+  }
+
+  &__iframe,
+  iframe {
+    position: absolute;
+    min-width: 100%;
+    min-height: 100%;
+    left: 0;
+    top: 0;
+
+    @include cv;
+
+    @include r(1200) {
+      height: 400px;
+    }
+  }
+
+  &__border {
+    color: $gray;
+    z-index: 1;
+
+    @include r(800) {
+      position: relative;
+      width: 848px;
+      height: 130px;
+      left: 50%;
+    }
+
+    @include r(600) {
+      width: 688px;
+      height: 90px;
+    }
+
+    &--top {
+      position: relative;
+      transform: scale(-1, -1);
+
+      @include r(800) {
+        transform: scale(-1, -1) translateX(50%);
+      }
+    }
+
+    &--bot {
+      color: #fff;
       position: absolute;
       bottom: 0;
       left: 0;

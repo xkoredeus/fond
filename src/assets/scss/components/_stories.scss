@@ -15,6 +15,17 @@
       bottom: -20px;
     }
   }
+  
+  &__in {
+    .container {
+      position: relative;
+      z-index: 1;
+    }
+
+    @include r(1200) {
+      text-align: center;
+    }
+  }
 
   &__video {
     position: relative;

@@ -1,4 +1,15 @@
 @font-face {
+  font-family: 'FuturaBold';
+  src: url('../fonts/FuturaBoldC.eot');
+  src: local('Futura Bold Cyrillic'), local('FuturaBoldC'),
+  url('../fonts/FuturaBoldC.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/FuturaBoldC.woff') format('woff'),
+  url('../fonts/FuturaBoldC.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
   font-family: 'FuturaDemi';
   src: url('../fonts/FuturaDemiC.eot');
   src: local('Futura Demi Cyrillic'), local('FuturaDemiC'),

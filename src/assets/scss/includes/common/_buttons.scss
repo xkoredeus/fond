@@ -12,8 +12,13 @@
   box-shadow: 0 10px 10px rgba(62, 142, 75, 0.2), 0 2px 0 #48A657;
 
   @include r(1200) {
+    font-size: $p1;
     box-shadow: 0 10px 10px rgba(62, 142, 75, 0.2), 0 2px 0 #48A657 !important;
     padding: 12px 20px;
+  }
+
+  @include r(600) {
+    padding: 8px 17px;
   }
 
   &:hover {
@@ -36,6 +41,30 @@
     &:hover {
       color: #fff;
       background-color: $green;
+    }
+  }
+
+  &--delete {
+    width: 44px;
+    height: 44px;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    @include flex-center;
+    @include ease;
+
+    svg {
+      fill: $dark;
+      @include ease;
+    }
+
+    &:hover {
+      background-color: $red;
+      box-shadow: 0 2px 0 #48A657;
+
+      svg {
+        fill: #fff;
+      }
     }
   }
 }

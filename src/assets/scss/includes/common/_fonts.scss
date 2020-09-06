@@ -1,8 +1,12 @@
+$fbold: 'FuturaBold';
 $fdem: 'FuturaDemi';
 $fmed: 'FuturaMedium';
 $flig: 'FuturaLight';
 $fbook: 'FuturaBook';
 
+.fbold {
+  font-family: $fbold;
+}
 .fdem {
   font-family: $fdem;
 }
