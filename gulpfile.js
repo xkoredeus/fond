@@ -89,7 +89,8 @@ gulp.task('scripts', function () {
     return gulp.src([
         'src/assets/js/vendor/jquery/jquery.min.js',
         'src/assets/js/vendor/jquery/jquery.masked-input.min.js',
-        'src/assets/js/vendor/tooltip/tooltip.js',
+        'src/assets/js/vendor/bootstrap/popper.min.js',
+        'src/assets/js/vendor/bootstrap/bootstrap.min.js',
         'src/assets/js/vendor/fancybox/jquery.fancybox.min.js',
         'src/assets/js/vendor/owl-carousel/owl.carousel.min.js',
         'src/assets/js/app.js',

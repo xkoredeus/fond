@@ -159,3 +159,7 @@ $(() => {
         timer2 = minutes + ':' + seconds;
     }, 1000);
 });
+
+$(() => {
+  $('[data-toggle="tooltip"]').tooltip();
+});
