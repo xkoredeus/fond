@@ -23,6 +23,9 @@ $(() => {
     $('.question__descr').hide();
 
     $('.question__top').on('click', function toggleQuestionDescription() {
+        $('.question').removeClass('active');
+        $('.question__descr').slideUp();
+
         $(this)
             .parent('.question')
             .toggleClass('active')
@@ -35,6 +38,11 @@ $(() => {
     $('.js-tel').mask("+7 (999) 999-99-99");
 });
 
+$(() => {
+    $(".js-select").select2({
+        minimumResultsForSearch: -1,
+    });
+});
 
 $(() => {
    $('.js-toggle-advanced-filter').on('click', function toggleAdvancedFilter() {
@@ -161,5 +169,34 @@ $(() => {
 });
 
 $(() => {
-  $('[data-toggle="tooltip"]').tooltip();
+    $('[data-toggle="tooltip"]').tooltip();
+});
+
+
+$(() => {
+    if ( $(window).width() > 1200 ) {
+        $.fn.parallax = function(resistance, mouse) {
+            $el = $(this);
+            TweenLite.to($el, 0.2, {
+                x: -((mouse.clientX - window.innerWidth / 2) / resistance),
+                y: -((mouse.clientY - window.innerHeight / 2) / resistance)
+            });
+        };
+        $(document).mousemove(function(e) {
+            $('.begin__decor--1').parallax(-30, e);
+            $('.begin__video-decor--1').parallax(105, e);
+            $('.begin__video-decor--2').parallax(-75, e);
+            $('.begin__decor--2').parallax(30, e);
+
+            $('.stories__decor--1').parallax(-30, e);
+            $('.stories__video-decor--1').parallax(105, e);
+            $('.stories__video-decor--2').parallax(-75, e);
+            $('.stories__decor--2').parallax(30, e);
+
+            $('.area-info__decor--1').parallax(-30, e);
+            $('.area-info__video-decor--1').parallax(105, e);
+            $('.area-info__video-decor--2').parallax(-75, e);
+            $('.area-info__decor--2').parallax(30, e);
+        });
+    }
 });
