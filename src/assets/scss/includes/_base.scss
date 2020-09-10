@@ -11,6 +11,8 @@
 @import "common/section";
 @import "common/owl-custom";
 @import "common/tooltip";
+@import "common/dropdown";
+@import "common/table";
 
 
 html, body {
@@ -51,9 +53,7 @@ a {
 }
 
 
-button {
-  border: none;
-  box-shadow: none;
-  outline: none;
-  background-color: $tr;
+hr {
+  background-color: #C4C4C4;
+  opacity: 1;
 }

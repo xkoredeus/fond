@@ -1,4 +1,4 @@
-<header class="header">
+<header class="header header--logged">
     <div class="container">
         <div class="d-flex flex-column flex-xl-row justify-content-between align-items-xl-center">
             <div class="d-flex justify-content-between align-items-center flex-grow-1">
@@ -8,8 +8,13 @@
                     <span class="header__logo-subtitle">Земля, доступная каждому</span>
                 </a>
 
+                <div class="d-none d-xl-flex justify-content-center align-items-center flex-grow-1 header__nav">
+                    <a class="header__nav-link" href="#">Бронирования</a>
+                    <a class="header__nav-link" href="#">Партнерские предложения</a>
+                    <a class="header__nav-link" href="#">Личная информация</a>
+                </div>
+
                 <div class="d-flex justify-content-end align-items-center">
-                    <button class="button mr-xl-3 d-none d-xl-block" data-src="#popup--call" data-fancybox type="button">Оставить заявку</button>
 
                     <a class="button header__favorites mr-2 mr-xl-4" href="#" data-toggle="tooltip" title="Избранные объекты" data-placement="bottom">
                         <span class="header__favorites-value">3</span>
@@ -35,11 +40,16 @@
 
             <div class="header__cabinet-wrp d-flex flex-column flex-xl-row justify-content-center align-items-center">
                 <div class="d-flex justify-content-center align-items-center mb-3 mb-xl-0">
-                    <a class="header__cabinet header__link" href="#">Регистрация</a>
-                    <a class="header__cabinet header__link" href="#">Вход</a>
+                    <a class="header__cabinet header__link" href="#" data-toggle="tooltip" title="Личный кабинет" data-placement="bottom">Viktor</a>
                     <svg width="22" height="36" class="header__cabinet-icon">
                         <use xlink:href="#door"></use>
                     </svg>
+                </div>
+
+                <div class="d-flex d-xl-none flex-column align-items-center header__nav">
+                    <a class="header__nav-link" href="#">Бронирования</a>
+                    <a class="header__nav-link" href="#">Партнерские предложения</a>
+                    <a class="header__nav-link" href="#">Личная информация</a>
                 </div>
 
                 <button class="button mb-3 d-xl-none" data-src="#popup--call" data-fancybox type="button">Оставить заявку</button>

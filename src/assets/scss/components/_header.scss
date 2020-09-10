@@ -8,11 +8,17 @@
 
     &::before {
       @include ovl;
-      height: calc(100% + 200px);
+      height: calc(100% + 280px);
       background-color: #020202;
       opacity: 0;
       visibility: hidden;
       @include ease;
+    }
+
+    &--logged {
+      &::before {
+        height: calc(100% + 300px);
+      }
     }
     
     .container {
@@ -221,6 +227,24 @@
 
         &-icon {
           fill: $dark;
+        }
+      }
+    }
+  }
+
+  &__nav {
+    &-link {
+      font-family: $fmed;
+      font-size: $p1;
+
+      @include r(1200) {
+        color: #fff;
+        margin-bottom: 15px;
+      }
+
+      &:not(:last-child) {
+        @include rmin(1200) {
+          margin-right: 15px;
         }
       }
     }

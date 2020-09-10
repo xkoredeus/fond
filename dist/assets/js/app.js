@@ -88,14 +88,25 @@ $(() => {
     $('.question__descr').hide();
 
     $('.question__top').on('click', function toggleQuestionDescription() {
-        $('.question').removeClass('active');
-        $('.question__descr').slideUp();
+        if ($(this).hasClass('parentIsActive')) {
+            $(this)
+                .removeClass('parentIsActive')
+                .parent('.question')
+                .removeClass('active')
+                .find('.question__descr')
+                .slideUp();
+        } else {
+            $('.question').removeClass('active');
+            $('.question__descr').slideUp();
 
-        $(this)
-            .parent('.question')
-            .toggleClass('active')
-            .find('.question__descr')
-            .slideToggle();
+            $(this)
+                .addClass('parentIsActive')
+                .parent('.question')
+                .toggleClass('active')
+                .find('.question__descr')
+                .slideToggle();
+        }
+
     })
 });
 
@@ -235,8 +246,15 @@ $(() => {
 
 $(() => {
     $('[data-toggle="tooltip"]').tooltip();
+    $('.dropdown-toggle').dropdown()
 });
 
+
+$(() => {
+    $('.js-close-changePassword').on('click', function closeChangePasswordDropdown() {
+        $('#changePassword').dropdown('hide');
+    });
+});
 
 $(() => {
     if ( $(window).width() > 1200 ) {
@@ -264,4 +282,62 @@ $(() => {
             $('.area-info__decor--2').parallax(30, e);
         });
     }
+});
+
+
+$(() => {
+    $('.partners-slider').owlCarousel({
+        loop: false,
+        smartSpeed: 800,
+        lazyLoad: true,
+        navText: ["<svg width='8' height='11' viewBox='0 0 8 11' xmlns='http://www.w3.org/2000/svg'><path d='M6.5 1L2 5.5L6.5 10' stroke-width='2'/></svg>", "<svg width='7' height='11' viewBox='0 0 7 11' xmlns='http://www.w3.org/2000/svg'><path d='M1 1L5.5 5.5L1 10' stroke-width='2'/></svg>"],
+        responsive : {
+            0 : {
+                dots: true,
+                items: 1,
+                autoHeight: true,
+            },
+            600 : {
+                dots: true,
+                items: 2,
+                autoHeight: true,
+                margin: 20,
+            },
+            800 : {
+                dots: true,
+                items: 3,
+                margin: 20,
+            },
+            1200 : {
+                nav: true,
+                dots: false,
+                items: 4,
+                margin: 0,
+            },
+        }
+    });
+});
+
+$(() => {
+    $('.reserved__slider').owlCarousel({
+        nav: true,
+        items: 1,
+        loop: false,
+        dots: true,
+        smartSpeed: 800,
+        lazyLoad: true,
+        navText: ["<svg width='8' height='11' viewBox='0 0 8 11' xmlns='http://www.w3.org/2000/svg'><path d='M6.5 1L2 5.5L6.5 10' stroke-width='2'/></svg>", "<svg width='7' height='11' viewBox='0 0 7 11' xmlns='http://www.w3.org/2000/svg'><path d='M1 1L5.5 5.5L1 10' stroke-width='2'/></svg>"],
+    });
+});
+
+$(() => {
+    $('.partners-offers__slider').owlCarousel({
+        nav: true,
+        items: 1,
+        loop: false,
+        dots: true,
+        smartSpeed: 800,
+        lazyLoad: true,
+        navText: ["<svg width='8' height='11' viewBox='0 0 8 11' xmlns='http://www.w3.org/2000/svg'><path d='M6.5 1L2 5.5L6.5 10' stroke-width='2'/></svg>", "<svg width='7' height='11' viewBox='0 0 7 11' xmlns='http://www.w3.org/2000/svg'><path d='M1 1L5.5 5.5L1 10' stroke-width='2'/></svg>"],
+    });
 });

@@ -1,0 +1,185 @@
+---
+layout: cabinet
+---
+<section class="section--gray">
+    <div class="container">
+        <div class="crumbs">
+            <span>
+                <a href="#">Главная</a>
+            </span>
+            <span>
+                <a href="#">Личный кабинет</a>
+            </span>
+            <span>Личная информация</span>
+        </div>
+        <div class="section--inner pt-0">
+            <div class="row">
+                <div class="col-xl-4 mb-4 mb-xl-0">
+                    <div class="section__title section__title--small">Личная информация</div>
+                    <div class="cabinet__info">
+                        <div class="mb-2">
+                            <div class="d-flex justify-content-xl-between align-items-center">
+                                <span>Петров Виктор Петрович</span>
+                                <button class="ml-2">
+                                    <svg width="16" height="16">
+                                        <use xlink:href="#edit"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="mb-2">+7 999 999 99 99</div>
+                        <div class="mb-2">petrov@mail.ru</div>
+
+                        <div class="dropdown dropright">
+                            <button class="button button--tr button--tr-black w-100 mt-3 mt-xl-4" id="changePassword" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Изменить пароль</button>
+                            <ul class="cabinet__dropdown dropdown-menu dropdown-menu-left" aria-labelledby="changePassword">
+                                <form class="cabinet__dropdown-in">
+                                    <button class="cabinet__dropdown-close js-close-changePassword">
+                                        <svg width="10" height="10">
+                                            <use xlink:href="#cross"></use>
+                                        </svg>
+                                    </button>
+                                    <div class="d-flex flex-column flex-sm-row align-items-xl-center mb-2 mb-xl-3">
+                                        <div class="cabinet__dropdown-label">Текущий пароль</div>
+                                        <input type="password" placeholder="Текущий пароль">
+                                    </div>
+                                    <div class="d-flex flex-column flex-sm-row align-items-xl-center mb-2 mb-xl-3">
+                                        <div class="cabinet__dropdown-label">Новый пароль</div>
+                                        <input type="password" placeholder="Новый пароль">
+                                    </div>
+                                    <div class="d-flex flex-column flex-sm-row align-items-xl-center mb-2 mb-xl-3">
+                                        <div class="cabinet__dropdown-label">Повторите новый пароль</div>
+                                        <input type="password" placeholder="Повторите новый пароль">
+                                    </div>
+                                    <div class="d-flex flex-column flex-sm-row align-items-xl-center mb-2 mb-xl-3">
+                                        <div class="d-none d-xl-block cabinet__dropdown-label"></div>
+                                        <button class="button" type="submit">Сохранить</button>
+                                    </div>
+                                </form>
+                            </ul>
+                        </div>
+
+                        <button class="button w-100 mt-3">Выйти из системы</button>
+                    </div>
+                </div>
+                <div class="col-xl-8">
+                    <div class="section__title section__title--small">Забронированные объекты</div>
+                    <div class="table__wrapper">
+                        <table class="table">
+                            <thead>
+                            <tr>
+                                <td>ID учас.</td>
+                                <td>Нас. пункт.</td>
+                                <td>Действие</td>
+                                <td>Площадь</td>
+                                <td>Цена</td>
+                                <td>Свойство</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>23815</td>
+                                <td>Поселок-1</td>
+                                <td>Бронь 13:23:59:59</td>
+                                <td>20 суток</td>
+                                <td>3 500 000</td>
+                                <td>Свободного назначения</td>
+                            </tr>
+                            <tr>
+                                <td>23815</td>
+                                <td>Поселок-1</td>
+                                <td>Бронь 13:23:59:59</td>
+                                <td>20 суток</td>
+                                <td>3 500 000</td>
+                                <td>Свободного назначения</td>
+                            </tr>
+                            <tr>
+                                <td>23815</td>
+                                <td>Поселок-1</td>
+                                <td>Бронь 13:23:59:59</td>
+                                <td>20 суток</td>
+                                <td>3 500 000</td>
+                                <td>Свободного назначения</td>
+                            </tr>
+                            <tr>
+                                <td>23815</td>
+                                <td>Поселок-1</td>
+                                <td>Бронь 13:23:59:59</td>
+                                <td>20 суток</td>
+                                <td>3 500 000</td>
+                                <td>Свободного назначения</td>
+                            </tr>
+                            <tr>
+                                <td>23815</td>
+                                <td>Поселок-1</td>
+                                <td>Бронь 13:23:59:59</td>
+                                <td>20 суток</td>
+                                <td>3 500 000</td>
+                                <td>Свободного назначения</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <hr class="w-100 my-4 my-xl-5">
+            <section>
+                <div class="section__title">Партнерские предложения</div>
+                <div class="section__subtitle section__subtitle--wide">Для наших клиентов мы собрали самые выгодные предложения в единый каталог - здесь вы найдете все для того, чтобы превратить ваш участок в полноценное место жительства.</div>
+                <div class="partners-slider owl-carousel">
+                    <div class="partners-slider__item">
+                        <div class="partners-slider__image" style="background-image: url('{{root}}assets/img/partners-offer__bg--1.jpg');"></div>
+                        <div class="partners-slider__info">
+                            <div class="partners-slider__title">Леруа Мерлен и скидка каждому 437-му</div>
+                            <div class="d-flex align-items-center">
+                                <button class="button button--tr button--tr-black">Хочу</button>
+                                <a class="button ml-2" href="#">Подробнее</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="partners-slider__item">
+                        <div class="partners-slider__image" style="background-image: url('{{root}}assets/img/partners-offer__bg--2.jpg');"></div>
+                        <div class="partners-slider__info">
+                            <div class="partners-slider__title">Потолки от Васи</div>
+                            <div class="d-flex align-items-center">
+                                <button class="button button--tr button--tr-black">Хочу</button>
+                                <a class="button ml-2" href="#">Подробнее</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="partners-slider__item">
+                        <div class="partners-slider__image" style="background-image: url('{{root}}assets/img/partners-offer__bg--3.jpg');"></div>
+                        <div class="partners-slider__info">
+                            <div class="partners-slider__title">Сногсшибательные собаки - охранники</div>
+                            <div class="d-flex align-items-center">
+                                <button class="button button--tr button--tr-black">Хочу</button>
+                                <a class="button ml-2" href="#">Подробнее</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="partners-slider__item">
+                        <div class="partners-slider__image" style="background-image: url('{{root}}assets/img/partners-offer__bg--4.jpg');"></div>
+                        <div class="partners-slider__info">
+                            <div class="partners-slider__title">Сруб прямиком из соседнего леса!</div>
+                            <div class="d-flex align-items-center">
+                                <button class="button button--tr button--tr-black">Хочу</button>
+                                <a class="button ml-2" href="#">Подробнее</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="partners-slider__item">
+                        <div class="partners-slider__image" style="background-image: url('{{root}}assets/img/partners-offer__bg--1.jpg');"></div>
+                        <div class="partners-slider__info">
+                            <div class="partners-slider__title">Леруа Мерлен и скидка каждому 437-му</div>
+                            <div class="d-flex align-items-center">
+                                <button class="button button--tr button--tr-black">Хочу</button>
+                                <a class="button ml-2" href="#">Подробнее</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</section>
+{{> feed}}

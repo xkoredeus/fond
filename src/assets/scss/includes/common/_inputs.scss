@@ -2,12 +2,17 @@ input,
 textarea,
 select {
   color: $dark;
-  font-family: $fdem, Roboto, sans-serif;
-  font-size: $p1;
+  //font-family: $fdem, Roboto, sans-serif;
+  font-size: $h5;
   padding: 12px 25px;
   border-radius: 5px;
   border: 1px solid $dgray;
+  outline: none;
   @include ease;
+
+  @include r(1200) {
+    font-size: $p1;
+  }
 }
 select {
   font-family: $fbook;
@@ -62,6 +67,11 @@ input[type="number"] {
 }
 .select2-container--default {
   font-size: $h5;
+
+  @include r(1200) {
+    font-size: $p1;
+  }
+
   .select2-selection--single {
     outline: none;
     min-height: 43.2px;

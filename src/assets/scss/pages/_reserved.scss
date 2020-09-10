@@ -1,0 +1,51 @@
+.reserved {
+
+  &__item {
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 5px;
+
+    @include r(1200) {
+      padding: 20px;
+    }
+  }
+
+  &__top {
+    margin-bottom: 20px;
+  }
+
+  &__slider {
+    border-radius: 5px;
+    overflow: hidden;
+
+    @include r(1200) {
+      margin-bottom: 20px;
+    }
+
+    &-item {
+      min-height: 165px;
+      @include cv;
+    }
+
+    .owl-nav {
+      button {
+        &.owl-prev {
+          left: 10px;
+        }
+        &.owl-next {
+          right: 10px;
+        }
+      }
+    }
+  }
+
+  &__info {
+    &:not(:last-child) {
+      margin-right: 15px;
+    }
+
+    @include r(1200) {
+      margin-bottom: 10px;
+    }
+  }
+}

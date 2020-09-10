@@ -1,3 +1,420 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color" content="#6232ad">
+    <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
+    <title>New Project</title>
+    <link rel="stylesheet" href="assets/css/app.css">
+</head>
+
+<body>
+<style>
+    .preloader__wrp {
+        position: fixed;
+        left: 0;
+        top: 0;
+        height: 100vh;
+        min-height: 300px;
+        width: 100vw;
+        background-color: #F6F6F6;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        z-index: 100;
+    }
+
+    .preloader {
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        height: 50px;
+        width: 50px;
+        margin: -25px 0 0 -25px;
+    }
+
+    .preloader span {
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        background: rgba(0, 0, 0, 0.25);
+        border-radius: 50%;
+        background: #5DD470;
+        -webkit-animation: preloader 1.7s infinite ease-in-out both;
+        animation: preloader 1.7s infinite ease-in-out both;
+        margin-right: 5px;
+    }
+
+    .preloader span:nth-child(1) {
+        left: 0;
+        -webkit-animation-delay: 0.6s;
+        animation-delay: 0.6s;
+    }
+
+    .preloader span:nth-child(2) {
+        left: 15px;
+        -webkit-animation-delay: 0.4s;
+        animation-delay: 0.4s;
+    }
+
+    .preloader span:nth-child(3) {
+        left: 30px;
+        -webkit-animation-delay: 0.2s;
+        animation-delay: 0.2s;
+    }
+
+    .preloader span:nth-child(4) {
+        left: 45px;
+        -webkit-animation-delay: 0.1s;
+        animation-delay: 0.1s;
+    }
+
+    @-webkit-keyframes preloader {
+        0%, 80%, 100% {
+            -webkit-transform: scale(0);
+            transform: scale(0);
+            transform: scale(0);
+            opacity: 0;
+        }
+        40% {
+            -webkit-transform: scale(1);
+            transform: scale(1);
+            transform: scale(1);
+            opacity: 1;
+        }
+    }
+
+    @keyframes preloader {
+        0%, 80%, 100% {
+            -webkit-transform: scale(0);
+            transform: scale(0);
+            transform: scale(0);
+            opacity: 0;
+        }
+        40% {
+            -webkit-transform: scale(1);
+            transform: scale(1);
+            transform: scale(1);
+            opacity: 1;
+        }
+    }
+</style>
+<div class="preloader__wrp">
+    <div class="preloader">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</div><div class="layout">
+    <div class="header__wrapper--light">
+        <header class="header header--logged">
+            <div class="container">
+                <div class="d-flex flex-column flex-xl-row justify-content-between align-items-xl-center">
+                    <div class="d-flex justify-content-between align-items-center flex-grow-1">
+                        <a class="header__logo header__link align-items-xl-center" href="#">
+                            <span class="header__logo-title">Сила земли</span>
+                            <span class="header__logo-delim"></span>
+                            <span class="header__logo-subtitle">Земля, доступная каждому</span>
+                        </a>
+        
+                        <div class="d-none d-xl-flex justify-content-center align-items-center flex-grow-1 header__nav">
+                            <a class="header__nav-link" href="#">Бронирования</a>
+                            <a class="header__nav-link" href="#">Партнерские предложения</a>
+                            <a class="header__nav-link" href="#">Личная информация</a>
+                        </div>
+        
+                        <div class="d-flex justify-content-end align-items-center">
+        
+                            <a class="button header__favorites mr-2 mr-xl-4" href="#" data-toggle="tooltip" title="Избранные объекты" data-placement="bottom">
+                                <span class="header__favorites-value">3</span>
+                                <svg width="31" height="28">
+                                    <use xlink:href="#heart"></use>
+                                </svg>
+                            </a>
+        
+                            <button class="header__hamb d-xl-none js-toggle-menu" type="button">
+                                <span class="header__hamb-icon header__hamb-icon--1">
+                                    <svg width="28" height="13">
+                                        <use xlink:href="#hamburger"></use>
+                                    </svg>
+                                </span>
+                                <span class="header__hamb-icon header__hamb-icon--2">
+                                    <svg width="22" height="22">
+                                        <use xlink:href="#cross"></use>
+                                    </svg>
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+        
+                    <div class="header__cabinet-wrp d-flex flex-column flex-xl-row justify-content-center align-items-center">
+                        <div class="d-flex justify-content-center align-items-center mb-3 mb-xl-0">
+                            <a class="header__cabinet header__link" href="#" data-toggle="tooltip" title="Личный кабинет" data-placement="bottom">Viktor</a>
+                            <svg width="22" height="36" class="header__cabinet-icon">
+                                <use xlink:href="#door"></use>
+                            </svg>
+                        </div>
+        
+                        <div class="d-flex d-xl-none flex-column align-items-center header__nav">
+                            <a class="header__nav-link" href="#">Бронирования</a>
+                            <a class="header__nav-link" href="#">Партнерские предложения</a>
+                            <a class="header__nav-link" href="#">Личная информация</a>
+                        </div>
+        
+                        <button class="button mb-3 d-xl-none" data-src="#popup--call" data-fancybox type="button">Оставить заявку</button>
+        
+                        <a class="header__tel d-xl-none" href="tel:88001234567">8 800 123 45 67</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <svg class="header__border" width="100%" height="183">
+            <use xlink:href="#border--top"></use>
+        </svg>
+    </div>
+    <div class="inner-content">
+        <section class="section--gray">
+            <div class="container">
+                <div class="crumbs">
+                    <span>
+                        <a href="#">Главная</a>
+                    </span>
+                    <span>
+                        <a href="#">Личный кабинет</a>
+                    </span>
+                    <span>Личная информация</span>
+                </div>
+                <div class="section--inner pt-0">
+                    <div class="row">
+                        <div class="col-xl-4 mb-4 mb-xl-0">
+                            <div class="section__title section__title--small">Личная информация</div>
+                            <div class="cabinet__info">
+                                <div class="mb-2">
+                                    <div class="d-flex justify-content-xl-between align-items-center">
+                                        <span>Петров Виктор Петрович</span>
+                                        <button class="ml-2">
+                                            <svg width="16" height="16">
+                                                <use xlink:href="#edit"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="mb-2">+7 999 999 99 99</div>
+                                <div class="mb-2">petrov@mail.ru</div>
+        
+                                <div class="dropdown dropright">
+                                    <button class="button button--tr button--tr-black w-100 mt-3 mt-xl-4" id="changePassword" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Изменить пароль</button>
+                                    <ul class="cabinet__dropdown dropdown-menu dropdown-menu-left" aria-labelledby="changePassword">
+                                        <form class="cabinet__dropdown-in">
+                                            <button class="cabinet__dropdown-close js-close-changePassword">
+                                                <svg width="10" height="10">
+                                                    <use xlink:href="#cross"></use>
+                                                </svg>
+                                            </button>
+                                            <div class="d-flex flex-column flex-sm-row align-items-xl-center mb-2 mb-xl-3">
+                                                <div class="cabinet__dropdown-label">Текущий пароль</div>
+                                                <input type="password" placeholder="Текущий пароль">
+                                            </div>
+                                            <div class="d-flex flex-column flex-sm-row align-items-xl-center mb-2 mb-xl-3">
+                                                <div class="cabinet__dropdown-label">Новый пароль</div>
+                                                <input type="password" placeholder="Новый пароль">
+                                            </div>
+                                            <div class="d-flex flex-column flex-sm-row align-items-xl-center mb-2 mb-xl-3">
+                                                <div class="cabinet__dropdown-label">Повторите новый пароль</div>
+                                                <input type="password" placeholder="Повторите новый пароль">
+                                            </div>
+                                            <div class="d-flex flex-column flex-sm-row align-items-xl-center mb-2 mb-xl-3">
+                                                <div class="d-none d-xl-block cabinet__dropdown-label"></div>
+                                                <button class="button" type="submit">Сохранить</button>
+                                            </div>
+                                        </form>
+                                    </ul>
+                                </div>
+        
+                                <button class="button w-100 mt-3">Выйти из системы</button>
+                            </div>
+                        </div>
+                        <div class="col-xl-8">
+                            <div class="section__title section__title--small">Забронированные объекты</div>
+                            <div class="table__wrapper">
+                                <table class="table">
+                                    <thead>
+                                    <tr>
+                                        <td>ID учас.</td>
+                                        <td>Нас. пункт.</td>
+                                        <td>Действие</td>
+                                        <td>Площадь</td>
+                                        <td>Цена</td>
+                                        <td>Свойство</td>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>23815</td>
+                                        <td>Поселок-1</td>
+                                        <td>Бронь 13:23:59:59</td>
+                                        <td>20 суток</td>
+                                        <td>3 500 000</td>
+                                        <td>Свободного назначения</td>
+                                    </tr>
+                                    <tr>
+                                        <td>23815</td>
+                                        <td>Поселок-1</td>
+                                        <td>Бронь 13:23:59:59</td>
+                                        <td>20 суток</td>
+                                        <td>3 500 000</td>
+                                        <td>Свободного назначения</td>
+                                    </tr>
+                                    <tr>
+                                        <td>23815</td>
+                                        <td>Поселок-1</td>
+                                        <td>Бронь 13:23:59:59</td>
+                                        <td>20 суток</td>
+                                        <td>3 500 000</td>
+                                        <td>Свободного назначения</td>
+                                    </tr>
+                                    <tr>
+                                        <td>23815</td>
+                                        <td>Поселок-1</td>
+                                        <td>Бронь 13:23:59:59</td>
+                                        <td>20 суток</td>
+                                        <td>3 500 000</td>
+                                        <td>Свободного назначения</td>
+                                    </tr>
+                                    <tr>
+                                        <td>23815</td>
+                                        <td>Поселок-1</td>
+                                        <td>Бронь 13:23:59:59</td>
+                                        <td>20 суток</td>
+                                        <td>3 500 000</td>
+                                        <td>Свободного назначения</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="w-100 my-4 my-xl-5">
+                    <section>
+                        <div class="section__title">Партнерские предложения</div>
+                        <div class="section__subtitle section__subtitle--wide">Для наших клиентов мы собрали самые выгодные предложения в единый каталог - здесь вы найдете все для того, чтобы превратить ваш участок в полноценное место жительства.</div>
+                        <div class="partners-slider owl-carousel">
+                            <div class="partners-slider__item">
+                                <div class="partners-slider__image" style="background-image: url('assets/img/partners-offer__bg--1.jpg');"></div>
+                                <div class="partners-slider__info">
+                                    <div class="partners-slider__title">Леруа Мерлен и скидка каждому 437-му</div>
+                                    <div class="d-flex align-items-center">
+                                        <button class="button button--tr button--tr-black">Хочу</button>
+                                        <a class="button ml-2" href="#">Подробнее</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="partners-slider__item">
+                                <div class="partners-slider__image" style="background-image: url('assets/img/partners-offer__bg--2.jpg');"></div>
+                                <div class="partners-slider__info">
+                                    <div class="partners-slider__title">Потолки от Васи</div>
+                                    <div class="d-flex align-items-center">
+                                        <button class="button button--tr button--tr-black">Хочу</button>
+                                        <a class="button ml-2" href="#">Подробнее</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="partners-slider__item">
+                                <div class="partners-slider__image" style="background-image: url('assets/img/partners-offer__bg--3.jpg');"></div>
+                                <div class="partners-slider__info">
+                                    <div class="partners-slider__title">Сногсшибательные собаки - охранники</div>
+                                    <div class="d-flex align-items-center">
+                                        <button class="button button--tr button--tr-black">Хочу</button>
+                                        <a class="button ml-2" href="#">Подробнее</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="partners-slider__item">
+                                <div class="partners-slider__image" style="background-image: url('assets/img/partners-offer__bg--4.jpg');"></div>
+                                <div class="partners-slider__info">
+                                    <div class="partners-slider__title">Сруб прямиком из соседнего леса!</div>
+                                    <div class="d-flex align-items-center">
+                                        <button class="button button--tr button--tr-black">Хочу</button>
+                                        <a class="button ml-2" href="#">Подробнее</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="partners-slider__item">
+                                <div class="partners-slider__image" style="background-image: url('assets/img/partners-offer__bg--1.jpg');"></div>
+                                <div class="partners-slider__info">
+                                    <div class="partners-slider__title">Леруа Мерлен и скидка каждому 437-му</div>
+                                    <div class="d-flex align-items-center">
+                                        <button class="button button--tr button--tr-black">Хочу</button>
+                                        <a class="button ml-2" href="#">Подробнее</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </section>
+        <section class="feed">
+            <svg class="section__border section__border--top" width="100%" height="183">
+                <use xlink:href="#border--top"></use>
+            </svg>
+            <div class="feed__in section--inner">
+                <div class="container">
+                    <div class="section__title">Записаться на консультацию с&nbsp;менеджером</div>
+                    <form class="feed__form">
+                        <div class="row mb-3">
+                            <div class="col-sm-6 mb-3 mb-sm-0">
+                                <select class="js-select w-100">
+                                    <option>Удобная дата</option>
+                                    <option>Дата</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-6">
+                                <select class="js-select w-100">
+                                    <option>Время</option>
+                                    <option>Время</option>
+                                </select>
+                            </div>
+                            <div class="col-12 mt-3">
+                                <textarea class="w-100" rows="6" placeholder="Комментарий по объекту"></textarea>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-column flex-sm-row justify-content-center">
+                            <button class="button button--tr">Менеджер свяжется с вами</button>
+                            <button class="button ml-sm-3 mt-3 mt-sm-0">Оставить заявку</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </div>
+    <footer class="footer">
+        <svg class="footer__border" width="100%" height="183">
+            <use xlink:href="#border--top"></use>
+        </svg>
+        <div class="footer__in">
+            <div class="container">
+                <div class="d-flex justify-content-center">
+                    <a class="footer__logo" href="#">
+                        <span class="footer__logo-title">Земельный фонд РФ</span>
+                        <span class="footer__logo-subtitle">Земля, доступная каждому.</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer></div>
+
 <svg width="0" height="0" class="svg-sprite">
     <symbol viewBox="0 0 185 44" xmlns="http://www.w3.org/2000/svg" id="logo">
     </symbol>
@@ -209,3 +626,6 @@
     </symbol>
 
 </svg>
+<script src="assets/js/app.js"></script>
+</body>
+</html>

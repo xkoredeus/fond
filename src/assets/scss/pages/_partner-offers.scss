@@ -1,0 +1,148 @@
+.partners {
+
+  &-offers {
+
+    &__item {
+      padding: 30px;
+      background-color: #fff;
+      border-radius: 5px;
+
+      @include r(1200) {
+        padding: 20px;
+      }
+    }
+
+    &__top {
+      margin-bottom: 20px;
+    }
+
+    &__slider {
+      border-radius: 5px;
+      overflow: hidden;
+
+      @include r(1200) {
+        margin-bottom: 20px;
+      }
+
+      &-item {
+        min-height: 165px;
+        @include cv;
+      }
+
+      .owl-nav {
+        button {
+          &.owl-prev {
+            left: 10px;
+          }
+          &.owl-next {
+            right: 10px;
+          }
+        }
+      }
+    }
+
+    &__info {
+      &:not(:last-child) {
+        margin-right: 15px;
+      }
+
+      @include r(1200) {
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  &-slider {
+    @include r(1200) {
+      padding-bottom: 30px;
+    }
+
+    & > .owl-dots {
+      bottom: -10px;
+
+      button.owl-dot {
+        background-color: $dark;
+
+        span {
+          background-color: $dark;
+        }
+      }
+    }
+
+    & > .owl-nav {
+      button.owl-next,
+      button.owl-prev{
+        top: 80px;
+        transform: translateY(0);
+      }
+    }
+
+    &__item {
+      border-radius: 5px;
+      background-color: $tr;
+      padding: 25px 15px;
+      @include ease;
+
+      @include r(1200) {
+        padding: 20px 15px;
+        background-color: #fff;
+        box-shadow: 0 5px 5px rgba(0, 0, 0, 0.05);
+      }
+
+      &:hover {
+        background-color: #fff;
+        box-shadow: 0 5px 5px rgba(0, 0, 0, 0.05);
+
+        .partners-slider {
+          &__info {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+          }
+        }
+      }
+    }
+
+    &__info {
+      @include ease;
+
+      @include rmin(1200) {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(8px);
+      }
+
+      @include rmin(600) {
+        .button {
+          &:last-child {
+            flex-grow: 1;
+          }
+        }
+      }
+
+      @include r(600) {
+        .button {
+          width: 50%;
+        }
+      }
+    }
+
+    &__image {
+      width: 100%;
+      min-height: 150px;
+      margin-bottom: 20px;
+      border-radius: 5px;
+      @include cv;
+    }
+
+    &__title {
+      min-height: 40px;
+      margin-bottom: 20px;
+
+      @include r(1200) {
+        min-height: auto;
+        margin-bottom: 15px;
+      }
+    }
+  }
+}

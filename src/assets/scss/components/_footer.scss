@@ -1,4 +1,5 @@
 .footer {
+  position: relative;
   color: #fff;
   margin-top: -183px;
 
@@ -49,6 +50,18 @@
     &-subtitle {
       font-size: 16px;
       color: #fff !important;
+    }
+  }
+
+  &__fix {
+    padding-bottom: 190px;
+
+    @include r(1200) {
+      padding-bottom: 130px;
+    }
+
+    @include r(600) {
+      padding-bottom: 110px;
     }
   }
 }

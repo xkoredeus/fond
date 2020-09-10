@@ -1,0 +1,40 @@
+.feed {
+  position: relative;
+  color: #fff;
+  background-image: url('../img/feed__bg.jpg');
+
+  &::before {
+    @include ovl;
+    background-color: $dark;
+    opacity: .85;
+  }
+  
+  & > * {
+    position: relative;
+  }
+
+  &__in {
+    padding-bottom: calc(60px + 180px);
+
+    @include r(1200) {
+      padding-bottom: calc(30px + 130px);
+    }
+  }
+
+  &__form {
+    @include rmin(1200) {
+      max-width: 570px;
+      margin: 0 auto;
+    }
+  }
+
+  textarea {
+    padding: 15px 13px;
+  }
+
+  .button {
+    @include r(400) {
+      width: 100%;
+    }
+  }
+}
