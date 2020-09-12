@@ -1,0 +1,71 @@
+.checkbox {
+  position: relative;
+  cursor: pointer;
+
+  input {
+    position: absolute;
+    z-index: -1;
+    visibility: hidden;
+    opacity: 0;
+
+    &:checked + .checkbox__text {
+      svg {
+        visibility: visible;
+        opacity: 1;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+
+  &__text {
+    text-align: left !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+  &__gal {
+    position: relative;
+    width: 39px;
+    min-width: 39px;
+    height: 39px;
+    border: 2px solid $dark;
+    border-radius: 5px;
+    margin-right: 13px;
+    display: inline-block;
+
+    @include r(1200) {
+      width: 20px;
+      min-width: 20px;
+      height: 20px;
+      margin-right: 8px;
+
+      svg {
+        width: 15px;
+        height: 15px;
+      }
+    }
+
+    svg {
+      position: absolute;
+      stroke: $green;
+      left: 50%;
+      top: 50%;
+      opacity: 0;
+      visibility: hidden;
+      transform: translate(-50%, -50%) scale(.5);
+      @include ease;
+    }
+  }
+
+  &__link {
+    color: $green;
+    border-bottom: 1px solid $green;
+    @include ease;
+
+    &:hover {
+      color: $dark;
+    }
+  }
+}

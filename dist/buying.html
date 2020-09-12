@@ -118,7 +118,7 @@
         </div>
     </div>    <div class="layout">
         <div class="header__wrapper--light">
-            <header class="header header--logged">
+            <header class="header">
                 <div class="container">
                     <div class="d-flex flex-column flex-xl-row justify-content-between align-items-xl-center">
                         <div class="d-flex justify-content-between align-items-center flex-grow-1">
@@ -128,13 +128,8 @@
                                 <span class="header__logo-subtitle">Земля, доступная каждому</span>
                             </a>
             
-                            <div class="d-none d-xl-flex justify-content-center align-items-center flex-grow-1 header__nav">
-                                <a class="header__nav-link" href="#">Бронирования</a>
-                                <a class="header__nav-link" href="#">Партнерские предложения</a>
-                                <a class="header__nav-link" href="#">Личная информация</a>
-                            </div>
-            
                             <div class="d-flex justify-content-end align-items-center">
+                                <button class="button mr-xl-3 d-none d-xl-block" data-src="#popup--call" data-fancybox type="button">Оставить заявку</button>
             
                                 <a class="button header__favorites mr-2 mr-xl-4" href="#" data-toggle="tooltip" title="Избранные объекты" data-placement="bottom">
                                     <span class="header__favorites-value">3</span>
@@ -160,16 +155,11 @@
             
                         <div class="header__cabinet-wrp d-flex flex-column flex-xl-row justify-content-center align-items-center">
                             <div class="d-flex justify-content-center align-items-center mb-3 mb-xl-0">
-                                <a class="header__cabinet header__link" href="#" data-toggle="tooltip" title="Личный кабинет" data-placement="bottom">Viktor</a>
+                                <a class="header__cabinet header__link" href="#">Регистрация</a>
+                                <a class="header__cabinet header__link" href="#">Вход</a>
                                 <svg width="22" height="36" class="header__cabinet-icon">
                                     <use xlink:href="#door"></use>
                                 </svg>
-                            </div>
-            
-                            <div class="d-flex d-xl-none flex-column align-items-center header__nav">
-                                <a class="header__nav-link" href="#">Бронирования</a>
-                                <a class="header__nav-link" href="#">Партнерские предложения</a>
-                                <a class="header__nav-link" href="#">Личная информация</a>
                             </div>
             
                             <button class="button mb-3 d-xl-none" data-src="#popup--call" data-fancybox type="button">Оставить заявку</button>
@@ -190,242 +180,422 @@
                         <span>
                             <a href="#">Главная</a>
                         </span>
-                        <span>
-                            <a href="#">Личный кабинет</a>
-                        </span>
-                        <span>Забронированные/купленные объекты</span>
+                        <span>Покупка объектов</span>
                     </div>
                     <div class="section--inner pt-0">
-                        <div class="section__title section__title--small">Забронированные объекты </div>
-                        <div class="row">
-                            <div class="col-xl-12 col-md-6 mb-3">
-                                <div class="reserved__item">
-                                    <div class="reserved__top d-flex flex-column flex-sm-row h5">
-                                        <div class="mr-2">ID 23815</div>
-                                        <div class="fdem">В поселке Поселок-1</div>
+                        <div class="section__title">Покупка объектов</div>
+                        <div class="h3 text-center">Отложены 4 объекта, они заморожены на 15 мин, чтобы Вы успели совершить платеж. </div>
+                        <div class="timer">
+                            <div class="timer__base d-flex justify-content-between">
+                                <div class="d-flex justify-content-between">
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                            </div>
+                            <div class="timer__in"></div>
+                        </div>            <div class="row pt-5">
+                            <div class="col-xl-3 col-sm-6 mb-5 mb-xl-4">
+                                <div class="object">
+                                    <button class="button--delete">
+                                        <svg width="14" height="16">
+                                            <use xlink:href="#trash-can"></use>
+                                        </svg>
+                                    </button>
+                                    <div class="object__top">
+                                        <div class="object__slider owl-carousel">
+                                            <div class="object__slider-item owl-lazy" data-src="assets/img/object__img--1.jpg"></div>
+                                            <div class="object__slider-item owl-lazy" data-src="assets/img/object__img--2.jpg"></div>
+                                            <div class="object__slider-item owl-lazy" data-src="assets/img/object__img--3.jpg"></div>
+                                        </div>
                                     </div>
-                                    <div class="row">
-                                        <div class="col-xl-4">
-                                            <div class="reserved__slider owl-carousel">
-                                                <div class="reserved__slider-item owl-lazy" data-src="assets/img/object__img--1.jpg"></div>
-                                                <div class="reserved__slider-item owl-lazy" data-src="assets/img/object__img--2.jpg"></div>
-                                                <div class="reserved__slider-item owl-lazy" data-src="assets/img/object__img--3.jpg"></div>
+                                    <div class="object__bot">
+                                        <div class="object__title">Поселок - 1</div>
+                                        <div class="object__info">
+                                            <div class="object__info-item">
+                                                <span class="object__info-icon">
+                                                    <svg width="16" height="19">
+                                                        <use xlink:href="#geo"></use>
+                                                    </svg>
+                                                </span>
+                                                <span>Ярославская обл.</span>
+                                            </div>
+                                            <div class="object__info-item">
+                                                <span class="object__info-icon">
+                                                    <svg width="20" height="20">
+                                                        <use xlink:href="#area"></use>
+                                                    </svg>
+                                                </span>
+                                                <span>600 участков от 20 соток</span>
                                             </div>
                                         </div>
-                                        <div class="col-xl-8">
-                                            <div class="h-100">
-                                                <div class="d-flex flex-column justify-content-between h-100">
-                                                    <div class="p1 mb-2 d-flex align-items-center">
-                                                        <svg width="20" height="20">
-                                                            <use xlink:href="#reserved"></use>
-                                                        </svg>
-                                                        <span class="ml-2">Бронирование объекта: до 20.10.2020</span>
-                                                    </div>
-                                                    <div class="p1">
-                                                        <div class="d-flex flex-wrap">
-                                                            <div class="reserved__info">
-                                                                <span class="object__info-icon">
-                                                                    <svg width="20" height="20">
-                                                                        <use xlink:href="#area"></use>
-                                                                    </svg>
-                                                                </span>
-                                                                <span>20 соток</span>
-                                                            </div>
-                                                            <div class="reserved__info">
-                                                                <span class="object__info-icon">
-                                                                    <svg width="16" height="19">
-                                                                        <use xlink:href="#geo"></use>
-                                                                    </svg>
-                                                                </span>
-                                                                <span>Ярославская обл.</span>
-                                                            </div>
-                                                            <div class="reserved__info">
-                                                                <span class="object__info-icon">
-                                                                    <svg width="15" height="15">
-                                                                        <use xlink:href="#role"></use>
-                                                                    </svg>
-                                                                </span>
-                                                                <span>Свободного назначения</span>
-                                                            </div>
-                                                        </div>
-                                                        <hr class="w-100 my-2 my-xl-3">
-                                                    </div>
-                                                    <div class="d-flex flex-column flex-xl-row">
-                                                        <a class="button button--tr button--tr-black" href="#">Детальное описание</a>
-                                                        <a class="button mt-3 mt-xl-0 ml-xl-3" href="#">Купить</a>
-                                                    </div>
-                                                </div>
+                                        <div class="object__options d-flex flex-wrap">
+                                            <div class="object__option" data-toggle="tooltip" title="Электричество" data-placement="left">
+                                                <svg width="14" height="24">
+                                                    <use xlink:href="#electric"></use>
+                                                </svg>
+                                            </div>
+                                            <div class="object__option" data-toggle="tooltip" title="Электричество" data-placement="left">
+                                                <svg width="18" height="22">
+                                                    <use xlink:href="#heating"></use>
+                                                </svg>
+                                            </div>
+                                            <div class="object__option" data-toggle="tooltip" title="Электричество" data-placement="left">
+                                                <svg width="20" height="22">
+                                                    <use xlink:href="#guard"></use>
+                                                </svg>
+                                            </div>
+                                            <div class="object__option" data-toggle="tooltip" title="Электричество" data-placement="left">
+                                                <svg width="20" height="20">
+                                                    <use xlink:href="#waterline"></use>
+                                                </svg>
                                             </div>
                                         </div>
+                                        <div class="object__price d-flex align-items-end flex-wrap">
+                                            <span class="mr-2">участки от</span>
+                                            <span class="object__price-value">135 000 <span class="rub"></span></span>
+                                        </div>
+                                        <a class="button object__button" href="#">Подробнее</a>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-xl-12 col-md-6 mb-3">
-                                <div class="reserved__item">
-                                    <div class="reserved__top d-flex flex-column flex-sm-row h5">
-                                        <div class="mr-2">ID 23815</div>
-                                        <div class="fdem">В поселке Поселок-1</div>
+                            <div class="col-xl-3 col-sm-6 mb-5 mb-xl-4">
+                                <div class="object">
+                                    <button class="button--delete">
+                                        <svg width="14" height="16">
+                                            <use xlink:href="#trash-can"></use>
+                                        </svg>
+                                    </button>
+                                    <div class="object__top" style="background-image: url('assets/img/object__img--2.jpg');">
+                                        <div class="object__label">Готовность 100%</div>
                                     </div>
-                                    <div class="row">
-                                        <div class="col-xl-4">
-                                            <div class="reserved__slider owl-carousel">
-                                                <div class="reserved__slider-item owl-lazy" data-src="assets/img/object__img--1.jpg"></div>
-                                                <div class="reserved__slider-item owl-lazy" data-src="assets/img/object__img--2.jpg"></div>
-                                                <div class="reserved__slider-item owl-lazy" data-src="assets/img/object__img--3.jpg"></div>
+                                    <div class="object__bot">
+                                        <div class="object__title">Поселок - 2</div>
+                                        <div class="object__info">
+                                            <div class="object__info-item">
+                                                <span class="object__info-icon">
+                                                    <svg width="16" height="19">
+                                                        <use xlink:href="#geo"></use>
+                                                    </svg>
+                                                </span>
+                                                <span>Ярославская обл.</span>
                                             </div>
                                         </div>
-                                        <div class="col-xl-8">
-                                            <div class="h-100">
-                                                <div class="d-flex flex-column justify-content-between h-100">
-                                                    <div class="p1 mb-2 d-flex align-items-center">
-                                                        <svg width="20" height="20">
-                                                            <use xlink:href="#reserved"></use>
-                                                        </svg>
-                                                        <span class="ml-2">Бронирование объекта: до 20.10.2020</span>
-                                                    </div>
-                                                    <div class="p1">
-                                                        <div class="d-flex flex-wrap">
-                                                            <div class="reserved__info">
-                                                                <span class="object__info-icon">
-                                                                    <svg width="20" height="20">
-                                                                        <use xlink:href="#area"></use>
-                                                                    </svg>
-                                                                </span>
-                                                                <span>20 соток</span>
-                                                            </div>
-                                                            <div class="reserved__info">
-                                                                <span class="object__info-icon">
-                                                                    <svg width="16" height="19">
-                                                                        <use xlink:href="#geo"></use>
-                                                                    </svg>
-                                                                </span>
-                                                                <span>Ярославская обл.</span>
-                                                            </div>
-                                                            <div class="reserved__info">
-                                                                <span class="object__info-icon">
-                                                                    <svg width="15" height="15">
-                                                                        <use xlink:href="#role"></use>
-                                                                    </svg>
-                                                                </span>
-                                                                <span>Свободного назначения</span>
-                                                            </div>
-                                                        </div>
-                                                        <hr class="w-100 my-2 my-xl-3">
-                                                    </div>
-                                                    <div class="d-flex flex-column flex-xl-row">
-                                                        <a class="button button--tr button--tr-black" href="#">Детальное описание</a>
-                                                        <a class="button mt-3 mt-xl-0 ml-xl-3" href="#">Купить</a>
-                                                    </div>
-                                                </div>
+                                        <div class="object__options d-flex flex-wrap">
+                                            <div class="object__option" data-toggle="tooltip" title="Электричество" data-placement="left">
+                                                <svg width="14" height="24">
+                                                    <use xlink:href="#electric"></use>
+                                                </svg>
+                                            </div>
+                                            <div class="object__option" data-toggle="tooltip" title="Электричество" data-placement="left">
+                                                <svg width="18" height="22">
+                                                    <use xlink:href="#heating"></use>
+                                                </svg>
+                                            </div>
+                                            <div class="object__option" data-toggle="tooltip" title="Электричество" data-placement="left">
+                                                <svg width="20" height="22">
+                                                    <use xlink:href="#guard"></use>
+                                                </svg>
+                                            </div>
+                                            <div class="object__option" data-toggle="tooltip" title="Электричество" data-placement="left">
+                                                <svg width="20" height="20">
+                                                    <use xlink:href="#waterline"></use>
+                                                </svg>
                                             </div>
                                         </div>
+                                        <div class="object__price d-flex align-items-end flex-wrap">
+                                            <span class="mr-2">участки от</span>
+                                            <span class="object__price-value">65 000 <span class="rub"></span></span>
+                                        </div>
+                                        <a class="button object__button" href="#">Подробнее</a>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-xl-12 col-md-6 mb-3">
-                                <div class="reserved__item">
-                                    <div class="reserved__top d-flex flex-column flex-sm-row h5">
-                                        <div class="mr-2">ID 23815</div>
-                                        <div class="fdem">В поселке Поселок-1</div>
+                            <div class="col-xl-3 col-sm-6 mb-5 mb-xl-4">
+                                <div class="object">
+                                    <button class="button--delete">
+                                        <svg width="14" height="16">
+                                            <use xlink:href="#trash-can"></use>
+                                        </svg>
+                                    </button>
+                                    <div class="object__top" style="background-image: url('assets/img/object__img--3.jpg');">
+                                        <div class="object__label object__label--inactive">Продано</div>
                                     </div>
-                                    <div class="row">
-                                        <div class="col-xl-4">
-                                            <div class="reserved__slider owl-carousel">
-                                                <div class="reserved__slider-item owl-lazy" data-src="assets/img/object__img--1.jpg"></div>
-                                                <div class="reserved__slider-item owl-lazy" data-src="assets/img/object__img--2.jpg"></div>
-                                                <div class="reserved__slider-item owl-lazy" data-src="assets/img/object__img--3.jpg"></div>
+                                    <div class="object__bot">
+                                        <div class="object__title">Поселок - 3</div>
+                                        <div class="object__info">
+                                            <div class="object__info-item">
+                                                <span class="object__info-icon">
+                                                    <svg width="16" height="19">
+                                                        <use xlink:href="#geo"></use>
+                                                    </svg>
+                                                </span>
+                                                <span>Ярославская обл.</span>
                                             </div>
                                         </div>
-                                        <div class="col-xl-8">
-                                            <div class="h-100">
-                                                <div class="d-flex flex-column justify-content-between h-100">
-                                                    <div class="p1 mb-2 d-flex align-items-center">
-                                                        <svg width="20" height="20">
-                                                            <use xlink:href="#reserved"></use>
-                                                        </svg>
-                                                        <span class="ml-2">Бронирование объекта: до 20.10.2020</span>
-                                                    </div>
-                                                    <div class="p1">
-                                                        <div class="d-flex flex-wrap">
-                                                            <div class="reserved__info">
-                                                                <span class="object__info-icon">
-                                                                    <svg width="20" height="20">
-                                                                        <use xlink:href="#area"></use>
-                                                                    </svg>
-                                                                </span>
-                                                                <span>20 соток</span>
-                                                            </div>
-                                                            <div class="reserved__info">
-                                                                <span class="object__info-icon">
-                                                                    <svg width="16" height="19">
-                                                                        <use xlink:href="#geo"></use>
-                                                                    </svg>
-                                                                </span>
-                                                                <span>Ярославская обл.</span>
-                                                            </div>
-                                                            <div class="reserved__info">
-                                                                <span class="object__info-icon">
-                                                                    <svg width="15" height="15">
-                                                                        <use xlink:href="#role"></use>
-                                                                    </svg>
-                                                                </span>
-                                                                <span>Свободного назначения</span>
-                                                            </div>
-                                                        </div>
-                                                        <hr class="w-100 my-2 my-xl-3">
-                                                    </div>
-                                                    <div class="d-flex flex-column flex-xl-row">
-                                                        <a class="button button--tr button--tr-black" href="#">Детальное описание</a>
-                                                        <a class="button mt-3 mt-xl-0 ml-xl-3" href="#">Купить</a>
-                                                    </div>
-                                                </div>
+                                        <div class="object__options d-flex flex-wrap">
+                                            <div class="object__option" data-toggle="tooltip" title="Электричество" data-placement="left">
+                                                <svg width="14" height="24">
+                                                    <use xlink:href="#electric"></use>
+                                                </svg>
+                                            </div>
+                                            <div class="object__option" data-toggle="tooltip" title="Электричество" data-placement="left">
+                                                <svg width="18" height="22">
+                                                    <use xlink:href="#heating"></use>
+                                                </svg>
+                                            </div>
+                                            <div class="object__option" data-toggle="tooltip" title="Электричество" data-placement="left">
+                                                <svg width="20" height="22">
+                                                    <use xlink:href="#guard"></use>
+                                                </svg>
                                             </div>
                                         </div>
+                                        <div class="object__price d-flex align-items-end flex-wrap">
+                                            <span class="mr-2">участки от</span>
+                                            <span class="object__price-value">15 000 <span class="rub"></span></span>
+                                        </div>
+                                        <a class="button object__button" href="#">Подробнее</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-sm-6 mb-5 mb-xl-4">
+                                <div class="object">
+                                    <button class="button--delete">
+                                        <svg width="14" height="16">
+                                            <use xlink:href="#trash-can"></use>
+                                        </svg>
+                                    </button>
+                                    <div class="object__top" style="background-image: url('assets/img/object__img--4.jpg');"></div>
+                                    <div class="object__bot">
+                                        <div class="object__title">Поселок - 4</div>
+                                        <div class="object__info">
+                                            <div class="object__info-item">
+                                                <span class="object__info-icon">
+                                                    <svg width="16" height="19">
+                                                        <use xlink:href="#geo"></use>
+                                                    </svg>
+                                                </span>
+                                                <span>Ярославская обл.</span>
+                                            </div>
+                                        </div>
+                                        <div class="object__options d-flex flex-wrap">
+                                            <div class="object__option" data-toggle="tooltip" title="Электричество" data-placement="left">
+                                                <svg width="14" height="24">
+                                                    <use xlink:href="#electric"></use>
+                                                </svg>
+                                            </div>
+                                            <div class="object__option" data-toggle="tooltip" title="Электричество" data-placement="left">
+                                                <svg width="18" height="22">
+                                                    <use xlink:href="#heating"></use>
+                                                </svg>
+                                            </div>
+                                            <div class="object__option" data-toggle="tooltip" title="Электричество" data-placement="left">
+                                                <svg width="20" height="22">
+                                                    <use xlink:href="#guard"></use>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <div class="object__price d-flex align-items-end flex-wrap">
+                                            <span class="mr-2">участки от</span>
+                                            <span class="object__price-value">15 000 <span class="rub"></span></span>
+                                        </div>
+                                        <a class="button object__button" href="#">Подробнее</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="d-flex justify-content-center mt-3">
-                            <button class="button">Показать следующее</button>
+                        <div class="d-flex flex-column align-items-center align-items-xl-end mt-3 h3 text-center--mobile">
+                            <div class="fdem">Итого стоимость объектов: <span class="fmed nowrap">20 000 рублей</span></div>
                         </div>
                     </div>
                 </div>
             </section>
-            <section class="feed">
+            <section class="login">
                 <svg class="section__border section__border--top" width="100%" height="183">
                     <use xlink:href="#border--top"></use>
                 </svg>
-                <div class="feed__in section--inner">
+                <div class="section__in section--inner">
                     <div class="container">
-                        <div class="section__title">Записаться на консультацию с&nbsp;менеджером</div>
-                        <form class="feed__form">
-                            <div class="row mb-3">
-                                <div class="col-sm-6 mb-3 mb-sm-0">
-                                    <select class="js-select w-100">
-                                        <option>Удобная дата</option>
-                                        <option>Дата</option>
-                                    </select>
-                                </div>
-                                <div class="col-sm-6">
-                                    <select class="js-select w-100">
-                                        <option>Время</option>
-                                        <option>Время</option>
-                                    </select>
-                                </div>
-                                <div class="col-12 mt-3">
-                                    <textarea class="w-100" rows="6" placeholder="Комментарий по объекту"></textarea>
-                                </div>
+                        <div class="d-flex flex-column align-items-center">
+                                <form class="login-form">
+                                    <div class="section__title mb-3">Личные данные</div>
+                                    <div class="section__subtitle fdem mb-3 mb-xl-4">Укажите данные, мы зарегистрируем аккаунт автоматически:</div>
+                                    <div class="login-form__in d-flex flex-column">
+                                        <input class="mb-2 mb-xl-3" type="text" placeholder="Представьтесь, пожалуйста">
+                                        <input class="mb-2 mb-xl-3 js-tel" type="tel" placeholder="Ваш телефон">
+                                        <input class="mb-2 mb-xl-3" type="email" placeholder="Ваш email">
+                                        <div class="login-form__actions d-flex flex-column flex-sm-row justify-content-between align-items-center mt-3 mb-4">
+                                            <button class="button mb-3 mb-sm-0" type="submit">Подтвердить</button>
+                                            <span class="mx-2">или</span>
+                                            <button class="button mt-2 mt-sm-0 mb-3 mb-sm-0 button--tr button--tr-black js-show-register">
+                                                Войдите
+                                            </button>
+                                            <span class="login-form__actions-append">Если у вас есть аккаунт</span>
+                                        </div>
+                                        <div class="text-center mb-3">Или зарегистрироваться при помощи</div>
+            
+                                        <div class="login-form__social d-flex justify-content-between justify-content-sm-around justify-content-xl-between">
+                                            <button class="button button--social button--social-vk">
+                                                <svg width="27" height="15">
+                                                    <use xlink:href="#vk"></use>
+                                                </svg>
+                                            </button>
+                                            <button class="button button--social button--social-gg">
+                                                <svg width="18" height="20">
+                                                    <use xlink:href="#gg"></use>
+                                                </svg>
+                                            </button>
+                                            <button class="button button--social button--social-fb">
+                                                <svg width="9" height="20">
+                                                    <use xlink:href="#fb"></use>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+            
+                                <form class="register-form">
+                                    <div class="section__title mb-3">Войти в аккаунт</div>
+                                    <div class="login-form__in d-flex flex-column">
+                                        <input class="mb-2 mb-xl-3" type="email" placeholder="Ваш email">
+                                        <input class="mb-2 mb-xl-3" type="password" placeholder="Ваш пароль">
+                                        <div class="login-form__actions d-flex flex-column justify-content-between align-items-center mt-3 mb-4">
+                                            <button class="button w-100" type="submit">Подтвердить</button>
+                                            <span class="my-3">или</span>
+                                            <button class="button mb-3 button--tr button--tr-black w-100 js-show-login">
+                                                Зарегистрируйтесь
+                                            </button>
+                                            <span>Если у вас нет аккаунта</span>
+                                        </div>
+                                        <div class="text-center mb-3">Или войдите при помощи</div>
+            
+                                        <div class="login-form__social d-flex justify-content-between justify-content-sm-around justify-content-xl-between">
+                                            <button class="button button--social button--social-vk">
+                                                <svg width="27" height="15">
+                                                    <use xlink:href="#vk"></use>
+                                                </svg>
+                                            </button>
+                                            <button class="button button--social button--social-gg">
+                                                <svg width="18" height="20">
+                                                    <use xlink:href="#gg"></use>
+                                                </svg>
+                                            </button>
+                                            <button class="button button--social button--social-fb">
+                                                <svg width="9" height="20">
+                                                    <use xlink:href="#fb"></use>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+            
+                                <label class="checkbox my-4 mt-xl-5">
+                                    <input type="checkbox">
+                                    <span class="checkbox__text">
+                                        <span class="checkbox__gal">
+                                            <svg width="30" height="30">
+                                                <use xlink:href="#gal"></use>
+                                            </svg>
+                                        </span>
+                                        <span>Я прочитал (а) и согласен (сна) с&nbsp;<span class="checkbox__link" data-src="#popup--terms" data-fancybox>условиями бронирования</span></span>
+                                    </span>
+                                </label>
+            
+                                <button class="button button--big">Перейти к оплате</button>
+                                <div class="mt-3 mt-xl-4 text-center">Вы будете перенаправлены на страницу оплаты, а затем - в личный кабинет,
+                                    <br class="d-none d-xl-inline"> где сможете продолжить оформление участков</div>
                             </div>
-                            <div class="d-flex flex-column flex-sm-row justify-content-center">
-                                <button class="button button--tr">Менеджер свяжется с вами</button>
-                                <button class="button ml-sm-3 mt-3 mt-sm-0">Оставить заявку</button>
-                            </div>
-                        </form>
                     </div>
                 </div>
+                <svg class="section__border section__border--bot" width="100%" height="183">
+                    <use xlink:href="#border--top"></use>
+                </svg>
             </section>
         </div>
-        <footer class="footer">
+        <section class="stories">
+            <img class="stories__decor stories__decor--1 d-none d-xl-block" src="assets/img/begin__decor--3.png" alt="blur-leaf">
+            <div class="stories__in section--inner section--gray">
+                <div class="container pb-3 pb-xl-5">
+                    <div class="section__title">Истории наших клиентов</div>
+                    <div class="row mb-3 mb-xl-4">
+                        <div class="col-xl-6">
+                            <div class="d-flex flex-column justify-content-between h-100">
+                                <p>Дело в том, что тут тестовый текст, поэтому сложно будет передать суть вопроса в такого рода тексте. Оставим это тут, чтобы Вы почитали и приняли для себя решение по поводу того почему все-таки так недорого мы отдаем нашу родную землю.</p>
+                                <div>
+                                    <div class="h3 fdem mb-2">Оформили все документы за 3 дня</div>
+                                    <p>Как у всех, наверное, у нас было куча "тараканов" в голове по поводу переезда из квартиры в дом за город. </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 mt-3 mt-xl-0">
+                            <div class="stories__video" style="background-image: url('/assets/img/stories__img.jpg');">
+                                <img class="stories__video-decor stories__video-decor--1 d-none d-xl-block" src="assets/img/begin__decor--1.png" alt="leaf">
+                                <img class="stories__video-decor stories__video-decor--2 d-none d-xl-block" src="assets/img/begin__decor--2.png" alt="leaf">
+                                <button class="stories__video-button" data-src="https://www.youtube.com/watch?v=XPpTgCho5ZA" data-fancybox>
+                                    <svg width="18" height="20">
+                                        <use xlink:href="#play"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <img class="stories__decor stories__decor--2 d-none d-xl-block" src="assets/img/begin__decor--4.png" alt="blur-leaf">
+        </section>        <section class="questions">
+            <div class="questions__in section--gray">
+                <div class="container">
+                    <div class="section__title">Вопрос-ответ</div>
+                    <div class="section__subtitle">В этом блоке мы собрали те вопросы, которые в первую очередь волнуют наших клиентов</div>
+                    <div class="row">
+                        <div class="col-xl-8 offset-xl-2">
+                            <div class="questions__list">
+                                <div class="question">
+                                    <div class="question__top">
+                                        <span>Как сотка земли в московской области может стоить так мало?</span>
+                                        <svg width="14" height="9" class="question__arrow">
+                                            <use xlink:href="#chevron"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="question__descr">
+                                        <p>Да, вопрос логичный, но не забывайте о том, что есть рынок и именно он диктует стоимость объектов.</p>
+                                        <p>Мы приобретаем землю в тех районах, где еще нет коммуникаций и налагаем на себя обязательства их обеспечить, отсюда такая цена земли.</p>
+                                    </div>
+                                </div>
+                                <div class="question">
+                                    <div class="question__top">
+                                        <span>Тут еще какой-то вопрос, фантазия закончилась?</span>
+                                        <svg width="14" height="9" class="question__arrow">
+                                            <use xlink:href="#chevron"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="question__descr">
+                                        <p>Да, вопрос логичный, но не забывайте о том, что есть рынок и именно он диктует стоимость объектов.</p>
+                                        <p>Мы приобретаем землю в тех районах, где еще нет коммуникаций и налагаем на себя обязательства их обеспечить, отсюда такая цена земли.</p>
+                                    </div>
+                                </div>
+                                <div class="question">
+                                    <div class="question__top">
+                                        <span>И третий вопрос, тут от фантазии не осталось ни следа?</span>
+                                        <svg width="14" height="9" class="question__arrow">
+                                            <use xlink:href="#chevron"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="question__descr">
+                                        <p>Да, вопрос логичный, но не забывайте о том, что есть рынок и именно он диктует стоимость объектов.</p>
+                                        <p>Мы приобретаем землю в тех районах, где еще нет коммуникаций и налагаем на себя обязательства их обеспечить, отсюда такая цена земли.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        
+                </div>
+            </div>
+        </section>        <footer class="footer">
             <svg class="footer__border" width="100%" height="183">
                 <use xlink:href="#border--top"></use>
             </svg>
@@ -724,6 +894,6 @@
     
     
     </svg>
-<script src="assets/js/app.js"></script>
+    <script src="assets/js/app.js"></script>
 </body>
 </html>

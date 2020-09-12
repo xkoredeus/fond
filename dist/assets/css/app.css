@@ -9751,27 +9751,19 @@ textarea::placeholder {
   color: #262626;
 }
 
-input[type="text"]::-webkit-input-placeholder,
-input[type="email"]::-webkit-input-placeholder,
-input[type="tel"]::-webkit-input-placeholder {
+input::-webkit-input-placeholder {
   color: #262626;
 }
 
-input[type="text"]::-moz-placeholder,
-input[type="email"]::-moz-placeholder,
-input[type="tel"]::-moz-placeholder {
+input::-moz-placeholder {
   color: #262626;
 }
 
-input[type="text"]::-ms-input-placeholder,
-input[type="email"]::-ms-input-placeholder,
-input[type="tel"]::-ms-input-placeholder {
+input::-ms-input-placeholder {
   color: #262626;
 }
 
-input[type="text"]::placeholder,
-input[type="email"]::placeholder,
-input[type="tel"]::placeholder {
+input::placeholder {
   color: #262626;
 }
 
@@ -9990,6 +9982,165 @@ button {
 
 .button--delete:hover svg {
   fill: #fff;
+}
+
+.button--social {
+  width: 100%;
+  max-width: 100px;
+}
+
+@media only screen and (max-width: 1200px) {
+  .button--social {
+    max-width: 70px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.button--social svg {
+  fill: #fff;
+  stroke: none;
+}
+
+.button--social-vk {
+  background-color: #45668E;
+  -webkit-box-shadow: 0 10px 10px rgba(41, 53, 43, 0.2), 0 2px 0 #3B5676;
+          box-shadow: 0 10px 10px rgba(41, 53, 43, 0.2), 0 2px 0 #3B5676;
+}
+
+.button--social-vk:hover {
+  -webkit-box-shadow: 0 10px 10px transparent, 0 2px 0 #3B5676;
+          box-shadow: 0 10px 10px transparent, 0 2px 0 #3B5676;
+}
+
+@media only screen and (max-width: 1200px) {
+  .button--social-vk {
+    -webkit-box-shadow: 0 10px 10px transparent, 0 2px 0 #3B5676 !important;
+            box-shadow: 0 10px 10px transparent, 0 2px 0 #3B5676 !important;
+  }
+}
+
+.button--social-gg {
+  background-color: #D63F3F;
+  -webkit-box-shadow: 0 10px 10px rgba(41, 53, 43, 0.2), 0 2px 0 #B82727;
+          box-shadow: 0 10px 10px rgba(41, 53, 43, 0.2), 0 2px 0 #B82727;
+}
+
+.button--social-gg:hover {
+  -webkit-box-shadow: 0 10px 10px transparent, 0 2px 0 #B82727;
+          box-shadow: 0 10px 10px transparent, 0 2px 0 #B82727;
+}
+
+@media only screen and (max-width: 1200px) {
+  .button--social-gg {
+    -webkit-box-shadow: 0 10px 10px transparent, 0 2px 0 #B82727 !important;
+            box-shadow: 0 10px 10px transparent, 0 2px 0 #B82727 !important;
+  }
+}
+
+.button--social-fb {
+  background-color: #455B99;
+  -webkit-box-shadow: 0 10px 10px rgba(41, 53, 43, 0.2), 0 2px 0 #36518A;
+          box-shadow: 0 10px 10px rgba(41, 53, 43, 0.2), 0 2px 0 #36518A;
+}
+
+.button--social-fb:hover {
+  -webkit-box-shadow: 0 10px 10px transparent, 0 2px 0 #36518A;
+          box-shadow: 0 10px 10px transparent, 0 2px 0 #36518A;
+}
+
+@media only screen and (max-width: 1200px) {
+  .button--social-fb {
+    -webkit-box-shadow: 0 10px 10px transparent, 0 2px 0 #36518A !important;
+            box-shadow: 0 10px 10px transparent, 0 2px 0 #36518A !important;
+  }
+}
+
+.checkbox {
+  position: relative;
+  cursor: pointer;
+}
+
+.checkbox input {
+  position: absolute;
+  z-index: -1;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.checkbox input:checked + .checkbox__text svg {
+  visibility: visible;
+  opacity: 1;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.checkbox__text {
+  text-align: left !important;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.checkbox__gal {
+  position: relative;
+  width: 39px;
+  min-width: 39px;
+  height: 39px;
+  border: 2px solid #262626;
+  border-radius: 5px;
+  margin-right: 13px;
+  display: inline-block;
+}
+
+@media only screen and (max-width: 1200px) {
+  .checkbox__gal {
+    width: 20px;
+    min-width: 20px;
+    height: 20px;
+    margin-right: 8px;
+  }
+  .checkbox__gal svg {
+    width: 15px;
+    height: 15px;
+  }
+}
+
+.checkbox__gal svg {
+  position: absolute;
+  stroke: #5DD470;
+  left: 50%;
+  top: 50%;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: translate(-50%, -50%) scale(0.5);
+          transform: translate(-50%, -50%) scale(0.5);
+  -webkit-transition: .3s all ease;
+  transition: .3s all ease;
+}
+
+.checkbox__link {
+  color: #5DD470;
+  border-bottom: 1px solid #5DD470;
+  -webkit-transition: .3s all ease;
+  transition: .3s all ease;
+}
+
+.checkbox__link:hover {
+  color: #262626;
 }
 
 .section--inner {
@@ -10838,6 +10989,138 @@ button {
   border-bottom-right-radius: 5px;
 }
 
+.popup {
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 30px 55px 40px;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  -webkit-transition: .3s all ease;
+  transition: .3s all ease;
+  -webkit-transform: translateY(50px);
+          transform: translateY(50px);
+  opacity: 0;
+}
+
+@media only screen and (max-width: 600px) {
+  .popup {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+.popup__wrp {
+  padding: 0 0 50px;
+  background-color: transparent;
+}
+
+@media only screen and (max-width: 600px) {
+  .popup__wrp {
+    padding: 0 10px 50px;
+  }
+}
+
+.popup--call {
+  max-width: 370px;
+}
+
+.popup--terms {
+  max-width: 900px;
+}
+
+.popup--terms__in {
+  max-height: 500px;
+  padding-right: 15px;
+  overflow-y: auto;
+}
+
+.popup--terms__in::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+.popup--terms__in::-webkit-scrollbar-track {
+  background-color: #F2F2F2;
+}
+
+.popup--terms__in::-webkit-scrollbar-thumb {
+  width: 10px;
+  height: 10px;
+  background: #5DD470;
+}
+
+@media only screen and (max-width: 1200px) {
+  .popup--terms__in {
+    max-height: 451px;
+  }
+}
+
+.popup--terms__button-icon {
+  width: 50px;
+  min-width: 50px;
+  height: 50px;
+  background-color: #5DD470;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media only screen and (max-width: 1200px) {
+  .popup--terms__button-icon {
+    width: 30px;
+    min-width: 30px;
+    height: 30px;
+  }
+}
+
+.popup--terms__button-icon svg {
+  stroke: #fff;
+}
+
+@media only screen and (max-width: 1200px) {
+  .popup--terms__button-icon svg {
+    width: 19px;
+  }
+}
+
+.popup--terms__button:hover {
+  color: #5DD470;
+}
+
+.fancybox-slide--current .popup {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  opacity: 1;
+}
+
+.fancybox-slide--html .fancybox-close-small {
+  padding: 8px;
+  background-color: #5DD470;
+  border-radius: 50%;
+  opacity: 1;
+}
+
+.fancybox-slide--html .fancybox-close-small:hover svg {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.fancybox-slide--html .fancybox-close-small svg {
+  -webkit-transition: .5s all ease-in-out;
+  transition: .5s all ease-in-out;
+}
+
+.fancybox-slide--html .fancybox-close-small svg path {
+  fill: #fff;
+}
+
 html, body {
   position: relative;
   font-family: "FuturaBook", Roboto, sans-serif;
@@ -10900,7 +11183,7 @@ hr {
     height: 100%;
     left: 0;
     top: 0;
-    height: calc(100% + 280px);
+    height: calc(100% + 180px);
     background-color: #020202;
     opacity: 0;
     visibility: hidden;
@@ -12768,6 +13051,34 @@ body.show-menu .header__cabinet-icon {
 @media only screen and (max-width: 400px) {
   .feed .button {
     width: 100%;
+  }
+}
+
+.login-form__in {
+  max-width: 370px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media only screen and (max-width: 600px) {
+  .login-form__in .button {
+    width: 100%;
+  }
+}
+
+.login-form__actions {
+  position: relative;
+}
+
+.login-form__actions-append {
+  margin-left: 15px;
+}
+
+@media only screen and (min-width: 1200px) {
+  .login-form__actions-append {
+    position: absolute;
+    min-width: 150px;
+    left: 100%;
   }
 }
 

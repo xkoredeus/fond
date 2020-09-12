@@ -8,7 +8,7 @@
 
     &::before {
       @include ovl;
-      height: calc(100% + 280px);
+      height: calc(100% + 180px);
       background-color: #020202;
       opacity: 0;
       visibility: hidden;

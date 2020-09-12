@@ -1,0 +1,233 @@
+---
+layout: inner
+---
+<section class="section--gray">
+    <div class="container">
+        <div class="crumbs">
+            <span>
+                <a href="#">Главная</a>
+            </span>
+            <span>Бронирование объектов</span>
+        </div>
+        <div class="section--inner pt-0">
+            <div class="section__title">Бронирование объектов</div>
+            <div class="h3 text-center">Отложены 4 объекта, они заморожены на 15 мин, чтобы Вы успели совершить платеж. Стоимость бронирования объектов входит в стоимость их дальнейшей покупки, либо будет полностью вовзращена в случае отказа от покупки.</div>
+            {{> timer}}
+            <div class="row pt-5">
+                <div class="col-xl-3 col-sm-6 mb-5 mb-xl-4">
+                    <div class="object">
+                        <button class="button--delete">
+                            <svg width="14" height="16">
+                                <use xlink:href="#trash-can"></use>
+                            </svg>
+                        </button>
+                        <div class="object__top">
+                            <div class="object__slider owl-carousel">
+                                <div class="object__slider-item owl-lazy" data-src="{{root}}assets/img/object__img--1.jpg"></div>
+                                <div class="object__slider-item owl-lazy" data-src="{{root}}assets/img/object__img--2.jpg"></div>
+                                <div class="object__slider-item owl-lazy" data-src="{{root}}assets/img/object__img--3.jpg"></div>
+                            </div>
+                        </div>
+                        <div class="object__bot">
+                            <div class="object__title">Поселок - 1</div>
+                            <div class="object__info">
+                                <div class="object__info-item">
+                                    <span class="object__info-icon">
+                                        <svg width="16" height="19">
+                                            <use xlink:href="#geo"></use>
+                                        </svg>
+                                    </span>
+                                    <span>Ярославская обл.</span>
+                                </div>
+                                <div class="object__info-item">
+                                    <span class="object__info-icon">
+                                        <svg width="20" height="20">
+                                            <use xlink:href="#area"></use>
+                                        </svg>
+                                    </span>
+                                    <span>600 участков от 20 соток</span>
+                                </div>
+                            </div>
+                            <div class="object__options d-flex flex-wrap">
+                                <div class="object__option" data-toggle="tooltip" title="Электричество" data-placement="left">
+                                    <svg width="14" height="24">
+                                        <use xlink:href="#electric"></use>
+                                    </svg>
+                                </div>
+                                <div class="object__option" data-toggle="tooltip" title="Электричество" data-placement="left">
+                                    <svg width="18" height="22">
+                                        <use xlink:href="#heating"></use>
+                                    </svg>
+                                </div>
+                                <div class="object__option" data-toggle="tooltip" title="Электричество" data-placement="left">
+                                    <svg width="20" height="22">
+                                        <use xlink:href="#guard"></use>
+                                    </svg>
+                                </div>
+                                <div class="object__option" data-toggle="tooltip" title="Электричество" data-placement="left">
+                                    <svg width="20" height="20">
+                                        <use xlink:href="#waterline"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="object__price d-flex align-items-end flex-wrap">
+                                <span class="mr-2">участки от</span>
+                                <span class="object__price-value">135 000 <span class="rub"></span></span>
+                            </div>
+                            <a class="button object__button" href="#">Подробнее</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-sm-6 mb-5 mb-xl-4">
+                    <div class="object">
+                        <button class="button--delete">
+                            <svg width="14" height="16">
+                                <use xlink:href="#trash-can"></use>
+                            </svg>
+                        </button>
+                        <div class="object__top" style="background-image: url('{{root}}assets/img/object__img--2.jpg');">
+                            <div class="object__label">Готовность 100%</div>
+                        </div>
+                        <div class="object__bot">
+                            <div class="object__title">Поселок - 2</div>
+                            <div class="object__info">
+                                <div class="object__info-item">
+                                    <span class="object__info-icon">
+                                        <svg width="16" height="19">
+                                            <use xlink:href="#geo"></use>
+                                        </svg>
+                                    </span>
+                                    <span>Ярославская обл.</span>
+                                </div>
+                            </div>
+                            <div class="object__options d-flex flex-wrap">
+                                <div class="object__option" data-toggle="tooltip" title="Электричество" data-placement="left">
+                                    <svg width="14" height="24">
+                                        <use xlink:href="#electric"></use>
+                                    </svg>
+                                </div>
+                                <div class="object__option" data-toggle="tooltip" title="Электричество" data-placement="left">
+                                    <svg width="18" height="22">
+                                        <use xlink:href="#heating"></use>
+                                    </svg>
+                                </div>
+                                <div class="object__option" data-toggle="tooltip" title="Электричество" data-placement="left">
+                                    <svg width="20" height="22">
+                                        <use xlink:href="#guard"></use>
+                                    </svg>
+                                </div>
+                                <div class="object__option" data-toggle="tooltip" title="Электричество" data-placement="left">
+                                    <svg width="20" height="20">
+                                        <use xlink:href="#waterline"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="object__price d-flex align-items-end flex-wrap">
+                                <span class="mr-2">участки от</span>
+                                <span class="object__price-value">65 000 <span class="rub"></span></span>
+                            </div>
+                            <a class="button object__button" href="#">Подробнее</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-sm-6 mb-5 mb-xl-4">
+                    <div class="object">
+                        <button class="button--delete">
+                            <svg width="14" height="16">
+                                <use xlink:href="#trash-can"></use>
+                            </svg>
+                        </button>
+                        <div class="object__top" style="background-image: url('{{root}}assets/img/object__img--3.jpg');">
+                            <div class="object__label object__label--inactive">Продано</div>
+                        </div>
+                        <div class="object__bot">
+                            <div class="object__title">Поселок - 3</div>
+                            <div class="object__info">
+                                <div class="object__info-item">
+                                    <span class="object__info-icon">
+                                        <svg width="16" height="19">
+                                            <use xlink:href="#geo"></use>
+                                        </svg>
+                                    </span>
+                                    <span>Ярославская обл.</span>
+                                </div>
+                            </div>
+                            <div class="object__options d-flex flex-wrap">
+                                <div class="object__option" data-toggle="tooltip" title="Электричество" data-placement="left">
+                                    <svg width="14" height="24">
+                                        <use xlink:href="#electric"></use>
+                                    </svg>
+                                </div>
+                                <div class="object__option" data-toggle="tooltip" title="Электричество" data-placement="left">
+                                    <svg width="18" height="22">
+                                        <use xlink:href="#heating"></use>
+                                    </svg>
+                                </div>
+                                <div class="object__option" data-toggle="tooltip" title="Электричество" data-placement="left">
+                                    <svg width="20" height="22">
+                                        <use xlink:href="#guard"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="object__price d-flex align-items-end flex-wrap">
+                                <span class="mr-2">участки от</span>
+                                <span class="object__price-value">15 000 <span class="rub"></span></span>
+                            </div>
+                            <a class="button object__button" href="#">Подробнее</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-sm-6 mb-5 mb-xl-4">
+                    <div class="object">
+                        <button class="button--delete">
+                            <svg width="14" height="16">
+                                <use xlink:href="#trash-can"></use>
+                            </svg>
+                        </button>
+                        <div class="object__top" style="background-image: url('{{root}}assets/img/object__img--4.jpg');"></div>
+                        <div class="object__bot">
+                            <div class="object__title">Поселок - 4</div>
+                            <div class="object__info">
+                                <div class="object__info-item">
+                                    <span class="object__info-icon">
+                                        <svg width="16" height="19">
+                                            <use xlink:href="#geo"></use>
+                                        </svg>
+                                    </span>
+                                    <span>Ярославская обл.</span>
+                                </div>
+                            </div>
+                            <div class="object__options d-flex flex-wrap">
+                                <div class="object__option" data-toggle="tooltip" title="Электричество" data-placement="left">
+                                    <svg width="14" height="24">
+                                        <use xlink:href="#electric"></use>
+                                    </svg>
+                                </div>
+                                <div class="object__option" data-toggle="tooltip" title="Электричество" data-placement="left">
+                                    <svg width="18" height="22">
+                                        <use xlink:href="#heating"></use>
+                                    </svg>
+                                </div>
+                                <div class="object__option" data-toggle="tooltip" title="Электричество" data-placement="left">
+                                    <svg width="20" height="22">
+                                        <use xlink:href="#guard"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="object__price d-flex align-items-end flex-wrap">
+                                <span class="mr-2">участки от</span>
+                                <span class="object__price-value">15 000 <span class="rub"></span></span>
+                            </div>
+                            <a class="button object__button" href="#">Подробнее</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex flex-column align-items-center align-items-xl-end mt-3 h3 text-center--mobile">
+                <div class="mb-2 mb-xl-3">Итого стоимость объектов: <span class="fmed nowrap">255 000 рублей</span></div>
+                <div class="fdem">Минимальный аванс для бронирования объектов: <span class="fmed nowrap">20 000 рублей</span></div>
+            </div>
+        </div>
+    </div>
+</section>
+{{> login}}

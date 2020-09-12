@@ -29,11 +29,10 @@ textarea {
     color: $dark;
   }
 }
-input[type="text"]::placeholder,
-input[type="email"]::placeholder,
-input[type="tel"]::placeholder {
+input::placeholder {
   color: $dark;
 }
+
 input:focus,
 textarea:focus,
 input:active,

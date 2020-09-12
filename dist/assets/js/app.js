@@ -228,7 +228,7 @@ $(() => {
 });
 
 $(() => {
-    let timer2 = "08:00";
+    let timer2 = "15:00";
     const interval = setInterval(function() {
         const timer = timer2.split(':');
         let minutes = parseInt(timer[0], 10);
@@ -245,10 +245,16 @@ $(() => {
 });
 
 $(() => {
+    $('[data-fancybox]').fancybox({
+        animationDuration: 600,
+        touch: false
+    });
+});
+
+$(() => {
     $('[data-toggle="tooltip"]').tooltip();
     $('.dropdown-toggle').dropdown()
 });
-
 
 $(() => {
     $('.js-close-changePassword').on('click', function closeChangePasswordDropdown() {
@@ -339,5 +345,26 @@ $(() => {
         smartSpeed: 800,
         lazyLoad: true,
         navText: ["<svg width='8' height='11' viewBox='0 0 8 11' xmlns='http://www.w3.org/2000/svg'><path d='M6.5 1L2 5.5L6.5 10' stroke-width='2'/></svg>", "<svg width='7' height='11' viewBox='0 0 7 11' xmlns='http://www.w3.org/2000/svg'><path d='M1 1L5.5 5.5L1 10' stroke-width='2'/></svg>"],
+    });
+});
+
+
+$(() => {
+    $('.register-form').hide();
+
+    $('.js-show-register').on('click', function showRegisterForm(e) {
+        e.preventDefault();
+
+        $('.login-form').hide();
+        $('.register-form').show();
+    });
+
+
+
+    $('.js-show-login').on('click', function showLoginForm(e) {
+        e.preventDefault();
+
+        $('.login-form').show();
+        $('.register-form').hide();
     });
 });
