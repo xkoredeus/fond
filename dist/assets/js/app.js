@@ -257,7 +257,8 @@ $(() => {
 });
 
 $(() => {
-    $('.js-close-changePassword').on('click', function closeChangePasswordDropdown() {
+    $('.js-close-changePassword').on('click', function closeChangePasswordDropdown(e) {
+        e.preventDefault();
         $('#changePassword').dropdown('hide');
     });
 });
