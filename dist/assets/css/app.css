@@ -9991,7 +9991,7 @@ button {
 
 @media only screen and (max-width: 1200px) {
   .button--social {
-    max-width: 70px;
+    max-width: 90px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -13055,12 +13055,17 @@ body.show-menu .header__cabinet-icon {
 }
 
 .login-form__in {
+  width: 100%;
+  min-width: 270px;
   max-width: 370px;
   margin-left: auto;
   margin-right: auto;
 }
 
 @media only screen and (max-width: 600px) {
+  .login-form__in {
+    min-width: 300px;
+  }
   .login-form__in .button {
     width: 100%;
   }

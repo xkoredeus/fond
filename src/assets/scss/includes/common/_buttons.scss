@@ -85,9 +85,13 @@ button {
     max-width: 100px;
 
     @include r(1200) {
-      max-width: 70px;
+      max-width: 90px;
       @include flex-center;
     }
+
+    //@include r(600) {
+    //  max-width: 90px;
+    //}
 
 
     svg {
