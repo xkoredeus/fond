@@ -168,8 +168,8 @@
                 
                             <div class="header__cabinet-wrp d-flex flex-column flex-xl-row justify-content-center align-items-center">
                                 <div class="d-flex justify-content-center align-items-center mb-3 mb-xl-0">
-                                    <a class="header__cabinet header__link" href="#">Регистрация</a>
-                                    <a class="header__cabinet header__link" href="#">Вход</a>
+                                    <button class="header__cabinet header__link" type="button" data-src="#popup--register" data-fancybox>Регистрация</button>
+                                    <button class="header__cabinet header__link" type="button" data-src="#popup--login" data-fancybox>Вход</button>
                                     <svg width="22" height="36" class="header__cabinet-icon">
                                         <use xlink:href="#door"></use>
                                     </svg>
@@ -1104,28 +1104,178 @@
             </div>
         </footer>    </div>
 
+    <div id="popup--login" class="popup__wrp" style="display: none;">
+        <form class="popup">
+            <div class="popup--small">
+                <div class="d-flex flex-column align-items-center">
+                    <div class="popup__in d-flex flex-column w-100">
+                        <div class="section__title mb-3">Вход</div>
+                        <input class="mb-2 mb-xl-3" type="email" placeholder="Ваш email">
+                        <input class="mb-2 mb-xl-3" type="password" placeholder="Ваш пароль">
+                        <button class="button">Войти</button>
+                        <div class="my-3 text-center">Или войти при помощи</div>
+                        <div class="d-flex justify-content-between justify-content-sm-around justify-content-xl-between mb-4">
+                            <button class="button button--social button--social-vk">
+                                <svg width="27" height="15">
+                                    <use xlink:href="#vk"></use>
+                                </svg>
+                            </button>
+                            <button class="button button--social button--social-gg">
+                                <svg width="18" height="20">
+                                    <use xlink:href="#gg"></use>
+                                </svg>
+                            </button>
+                            <button class="button button--social button--social-fb">
+                                <svg width="9" height="20">
+                                    <use xlink:href="#fb"></use>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="d-flex flex-column align-items-center">
+                            <button class="popup__link mb-3" data-src="#popup--password" data-fancybox>Забыли пароль?</button>
+                            <div>Нет аккаунта? <button class="popup__link" data-src="#popup--register" data-fancybox>Зарегиструруйтесь</button></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    
+    <div id="popup--register" class="popup__wrp" style="display: none;">
+        <form class="popup">
+            <div class="popup--small">
+                <div class="d-flex flex-column align-items-center">
+                    <div class="popup__in d-flex flex-column w-100">
+                        <div class="section__title mb-3">Регистрация</div>
+                        <button class="button" data-src="#popup--register-active" data-fancybox>Зарегистрироваться</button>
+                        <div class="my-3 text-center">Или зарегистрируйтесь при помощи</div>
+                        <div class="d-flex justify-content-between justify-content-sm-around justify-content-xl-between mb-4">
+                            <button class="button button--social button--social-vk">
+                                <svg width="27" height="15">
+                                    <use xlink:href="#vk"></use>
+                                </svg>
+                            </button>
+                            <button class="button button--social button--social-gg">
+                                <svg width="18" height="20">
+                                    <use xlink:href="#gg"></use>
+                                </svg>
+                            </button>
+                            <button class="button button--social button--social-fb">
+                                <svg width="9" height="20">
+                                    <use xlink:href="#fb"></use>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="d-flex flex-column align-items-center">
+                            <div>Уже зарегистрированы? <button class="popup__link" data-src="#popup--login" data-fancybox>Войти</button></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    
+    <div id="popup--register-active" class="popup__wrp" style="display: none;">
+        <form class="popup">
+            <div class="popup--small">
+                <div class="d-flex flex-column align-items-center">
+                    <div class="popup__in d-flex flex-column w-100">
+                        <div class="section__title mb-3">Регистрация</div>
+                        <input class="mb-2" type="text" placeholder="Представьтесь, пожалуйста">
+                        <input class="mb-2 js-tel" type="tel" placeholder="Ваш телефон">
+                        <input class="mb-2 mb-xl-3" type="email" placeholder="Ваш email">
+                        <input class="mb-2 mb-xl-3" type="password" placeholder="Придумайте пароль">
+                        <input class="mb-2 mb-xl-3" type="password" placeholder="Повторите пароль">
+                        <button class="button">Зарегистрироваться</button>
+                        <div class="d-flex flex-column align-items-center mt-4">
+                            <div>Уже зарегистрированы? <button class="popup__link" data-src="#popup--login" data-fancybox>Войти</button></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    
+    <div id="popup--password" class="popup__wrp" style="display: none;">
+        <form class="popup">
+            <div class="popup--medium">
+                <div class="d-flex flex-column align-items-center">
+                    <div class="section__title mb-3">Восстановление пароля</div>
+                    <div class="popup__in d-flex flex-column w-100">
+                        <input class="mb-2 mb-xl-3" type="email" placeholder="Ваш email">
+                        <button class="button" data-src="#popup--password-active" data-fancybox>Отправить</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    
+    <div id="popup--password-active" class="popup__wrp" style="display: none;">
+        <form class="popup">
+            <div class="popup--medium">
+                <div class="d-flex flex-column align-items-center">
+                    <div class="section__title mb-3">Восстановление пароля</div>
+                    <div class="popup__in d-flex flex-column w-100">
+                        <input class="mb-2 mb-xl-3" type="password" placeholder="Введите новый пароль">
+                        <input class="mb-2 mb-xl-3" type="password" placeholder="Введите новый пароль еще раз">
+                        <button class="button">Сохранить</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    
+    
     <div id="popup--call" class="popup__wrp" style="display: none;">
         <form class="popup">
-            <div class="popup--call">
+            <div class="popup--small">
                 <div class="d-flex flex-column align-items-center">
-                    <div class="section__title section__title--small mb-2">Оставьте заявку</div>
-                    <div class="section__subtitle mb-3">наш менеджер свяжется с вами</div>
-                </div>
-                <div class="d-flex flex-column">
-                    <input class="mb-2" type="text" placeholder="Представьтесь, пожалуйста">
-                    <input class="mb-2 js-tel" type="tel" placeholder="Ваш телефон">
-                    <input class="mb-3 mb-xl-4" type="email" placeholder="Ваш email">
-                    <button class="button">Отправить</button>
+                    <div class="popup__in d-flex flex-column w-100">
+                        <div class="section__title mb-2">Заявка</div>
+                        <div class="section__subtitle fmed mb-3">Оствьте Ваши данные, и наш специалист по&nbsp;недвижимости свяжется с&nbsp;Вами в&nbsp;ближайшее время</div>
+                        <input class="mb-2" type="text" placeholder="Представьтесь, пожалуйста">
+                        <input class="mb-2 js-tel" type="tel" placeholder="Ваш телефон">
+                        <input class="mb-3 mb-xl-4" type="email" placeholder="Ваш email">
+                        <button class="button">Отправить</button>
+                    </div>
                     <label class="checkbox my-4 mt-xl-5">
                         <input type="checkbox">
                         <span class="checkbox__text">
-                        <span class="checkbox__gal">
-                            <svg width="30" height="30">
-                                <use xlink:href="#gal"></use>
-                            </svg>
+                            <span class="checkbox__gal">
+                                <svg width="30" height="30">
+                                    <use xlink:href="#gal"></use>
+                                </svg>
+                            </span>
+                            <span>Я прочитал (а) и согласен (сна) с&nbsp;<a class="checkbox__link" href="#">политикой конфиденциальности</a></span>
                         </span>
-                        <span>Я прочитал (а) и согласен (сна) с&nbsp;<a class="checkbox__link" href="#">политикой конфиденциальности</a></span>
-                    </span>
+                    </label>
+                </div>
+            </div>
+        </form>
+    </div>
+    
+    <div id="popup--offer" class="popup__wrp" style="display: none;">
+        <form class="popup">
+            <div class="popup--small">
+                <div class="d-flex flex-column align-items-center">
+                    <div class="popup__in d-flex flex-column w-100">
+                        <div class="section__title mb-2">Воспользоваться партнерским предложением</div>
+                        <div class="section__subtitle fmed mb-3">Оствьте Ваши данные, и наш специалист по&nbsp;недвижимости свяжется с&nbsp;Вами в&nbsp;ближайшее время</div>
+                        <input class="mb-2" type="text" placeholder="Представьтесь, пожалуйста">
+                        <input class="mb-2 js-tel" type="tel" placeholder="Ваш телефон">
+                        <input class="mb-3 mb-xl-4" type="email" placeholder="Ваш email">
+                        <button class="button">Отправить</button>
+                    </div>
+                    <label class="checkbox my-4 mt-xl-5">
+                        <input type="checkbox">
+                        <span class="checkbox__text">
+                            <span class="checkbox__gal">
+                                <svg width="30" height="30">
+                                    <use xlink:href="#gal"></use>
+                                </svg>
+                            </span>
+                            <span>Я прочитал (а) и согласен (сна) с&nbsp;<a class="checkbox__link" href="#">политикой конфиденциальности</a></span>
+                        </span>
                     </label>
                 </div>
             </div>
@@ -1134,7 +1284,7 @@
     
     <div id="popup--terms" class="popup__wrp" style="display: none;">
         <form class="popup">
-            <div class="popup--terms d-flex flex-column">
+            <div class="popup--wide d-flex flex-column">
                 <div class="d-flex justify-content-center mb-3 mb-xl-5">
                     <button class="popup--terms__button d-flex align-items-center">
                         <span class="popup--terms__button-icon">

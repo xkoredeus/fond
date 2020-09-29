@@ -129,6 +129,8 @@
     font-size: 16px;
     border-bottom: 1px solid #fff;
     margin-right: 20px;
+    padding-left: 0;
+    padding-right: 0;
 
     &-wrp {
       @include r(1200) {
