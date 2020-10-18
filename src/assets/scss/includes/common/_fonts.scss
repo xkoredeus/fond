@@ -1,23 +1,23 @@
-$fbold: 'FuturaBold';
-$fdem: 'FuturaDemi';
-$fmed: 'FuturaMedium';
-$flig: 'FuturaLight';
-$fbook: 'FuturaBook';
+$gbold: 'Gilroy-Bold';
+$gsbold: 'Gilroy-SemiBold';
+$gmed: 'Gilroy-Medium';
+$glig: 'Gilroy-Light';
+$greg: 'Gilroy-Regular';
 
-.fbold {
-  font-family: $fbold;
+.gbold {
+  font-family: $gbold;
 }
-.fdem {
-  font-family: $fdem;
+.gsbold {
+  font-family: $gsbold;
 }
-.fmed {
-  font-family: $fmed
+.gmed {
+  font-family: $gmed
 }
-.flig {
-  font-family: $flig;
+.glig {
+  font-family: $glig;
 }
 .fbook {
-  font-family: $fbook;
+  font-family: $greg;
 }
 
 $h1: 50px;

@@ -51,13 +51,14 @@
   }
 
   &__subtitle {
-    font-size: $h2;
+    font-family: $gbold;
+    font-size: $h3;
     line-height: 1.2;
     max-width: 910px;
     margin: 25px auto 65px;
 
     @include r(1200) {
-      font-family: $fmed;
+      font-family: $gmed;
       font-size: $p1;
       margin: 25px auto 10px;
       min-height: 100px;
